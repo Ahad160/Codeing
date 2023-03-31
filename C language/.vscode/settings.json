@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.c": "c",
+        "02_03_22.C": "cpp",
+        "*.0": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "time.h": "c",
+        "string.h": "c",
+        "string_praticeset_4.C": "cpp",
+        "08_16_PR_08.C": "cpp"
+    }
+}
