@@ -8,7 +8,7 @@ class Parent:
 
 
     @classmethod
-    def change_ripermode(cls,mode):            # gonna change class atribute
+    def change_ripermode(cls,mode):             # gonna change class atribute
         cls.Ripermode = mode
         print(f"Riper Mode is {cls.Ripermode}")
 
