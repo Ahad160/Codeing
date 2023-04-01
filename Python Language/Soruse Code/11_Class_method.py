@@ -21,3 +21,4 @@ print(object.Ripermode)
 object.change_ripermode(True)
 
 print(object.Ripermode)
+
