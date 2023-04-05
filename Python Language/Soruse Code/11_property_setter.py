@@ -10,7 +10,7 @@ class Parent:
 
     @Function.setter
     def change(self,num):
-        self.Salary=num
+        self.Salary=nums
 
 object=Parent()
 
