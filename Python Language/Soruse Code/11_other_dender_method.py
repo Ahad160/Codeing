@@ -4,7 +4,6 @@ class Parent:
      return f"Code is {self.code}"
 
 class Child:
-    lenth="900"
     def __len__(self):
         return 500
 
