@@ -1,1 +1,1 @@
-
+file=open("texting","r")
