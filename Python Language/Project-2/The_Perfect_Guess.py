@@ -7,6 +7,8 @@ class Auto:
     def __init__(self,R_Num):
          i=True         
          while i == True:
+
+          try:
             user=int(input("Enter a number\n"))
             if user<R_Num:
               print("Guess A Big Number")
@@ -17,6 +19,8 @@ class Auto:
             elif user==R_Num:
               print(f"You Guess The right Number At {self.time} Times\n")              
               break
+          except Exception as error:
+           print(f'You did not enter integer so it showing {error}')
 
     def Score(self):   
         file=open("highscore.txt",'r')
