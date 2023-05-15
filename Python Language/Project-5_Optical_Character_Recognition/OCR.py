@@ -21,4 +21,4 @@ class OCR:
 
 object=OCR()
 
-print(object.Extract('NR_1.jpg'))
+print(object.Extract('DG.jpg'))

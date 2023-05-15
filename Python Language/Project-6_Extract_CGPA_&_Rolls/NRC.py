@@ -1,9 +1,9 @@
 # Open file 1 containing board rolls
-with open("Rolls.txt", "r") as f1:
+with open("ALL_Roll.txt","r") as f1:
     board_rolls = f1.readlines()
 
 # Open file 2 containing board rolls and CGPA
-with open("CGPA.txt", "r") as f2:
+with open("GAI_CGPA.txt", "r") as f2:
     board_cgpa = f2.readlines()
 
 # Extract board rolls from file 1
