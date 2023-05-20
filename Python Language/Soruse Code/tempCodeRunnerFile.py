@@ -1,1 +1,1 @@
-file=open("texting","r")
+print(__name__)
