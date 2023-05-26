@@ -1,0 +1,1 @@
+game highscore 500
