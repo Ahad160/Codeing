@@ -8,3 +8,5 @@ list=[123,2.4,True,'Raiden']
 
 for index,item in enumerate(list):
     print(f'Item Name-{item} Index-{index}') 
+
+
