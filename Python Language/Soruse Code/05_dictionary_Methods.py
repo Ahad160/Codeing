@@ -8,11 +8,14 @@ dict={
 # print(dict.keys())
 # updatE={"skill":"Underprosess"}
 # dict.update(updatE)
+
+# thisdict["color"] = "red" #2nd Ways to add item to dic
 # print(dict)
 
 # print(dict.keys())
 
-print(dict["naame"])
-print(dict.get("name"))
+print(dict["Name"])
+print(dict.get("Name"))
+print(dict.keys())
 
 

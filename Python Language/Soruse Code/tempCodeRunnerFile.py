@@ -1,6 +1,3 @@
-user_1=input("Enter Youer Name\n")
+list_1=[ "7, 14, 21 , 28 , 35 , 42 , 49 , 56 , 63 , 70" ]
 
-Funtions=lambda Name:print(f"User Name is {Name}")
-print("2")
-
-Funtions(user_1)
+print("\n".join(list_1))
