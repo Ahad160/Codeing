@@ -38,8 +38,8 @@ class Storage:
                 print("Incorrect Account Name\n")
 
     def AddPassword(self):
-        key=input("Enter The Account Name➡️   ")
-        value=input("Enter The Password Name➡️   ")
+        key=input("Enter Account Name➡️   ")
+        value=input(f"Enter {key} Password➡️   ")
 
         file= open("viewpass.txt","r")
         read=file.read()
@@ -62,9 +62,11 @@ class Storage:
             for i in range(len(lists)):
                 print(f"{i+1}.{lists[i]}")    
 
-            key=input("Enter The Account Name➡️   ")
+            key=input("Enter Account Name➡️   ")
 
             del dictionary[key]
+
+            print(f"🔴 {key} Password is Deleted🔴\n")
 
             sread= open("viewpass.txt","w")
             sread.write(str(dictionary))
@@ -81,7 +83,7 @@ while True:
         print("""----------------------------------------
     🔺       1.View All Password          🔺
     🔺       2.Edit Password              🔺
-    🔺       3.Add New Account,Password   🔺
+    🔺       3.Add Password               🔺
     🔺       4.Delete Password            🔺
     🔺       5.Exit                       🔺
     ----------------------------------------""")
