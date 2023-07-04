@@ -1,3 +1,1 @@
-list_1=[ "7, 14, 21 , 28 , 35 , 42 , 49 , 56 , 63 , 70" ]
-
-print("\n".join(list_1))
+print("\033[91mMy Name is Raiden\033[0m")

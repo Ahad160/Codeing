@@ -29,7 +29,7 @@ class Child_2(Child_1):
 
 
 
-object=Child_2()
+object=Child_1()
 
 
-object.Play2()
+# object.Play2()

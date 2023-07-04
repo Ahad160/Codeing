@@ -79,7 +79,7 @@ object = Storage()
 
 while True:
     try:
-        print("\t🟢 Password Manager🟢")
+        print(" \t🟢\033[91mPassword Manager\033[0m🟢")
         print("""----------------------------------------
     🔺       1.View All Password          🔺
     🔺       2.Edit Password              🔺
