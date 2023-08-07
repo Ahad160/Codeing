@@ -4,4 +4,4 @@ try:
 except Exception as Error:
     print(Error)
 else:
-    print("The divide is sucessfully Complete")       
+    print("The divide is sucessfully Complete")
