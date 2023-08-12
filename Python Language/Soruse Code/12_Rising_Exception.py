@@ -4,6 +4,7 @@ def increment(number):
 
     except:
         raise ValueError("Check the value")
+        
 
 display=increment("das")
 print(display)
