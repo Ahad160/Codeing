@@ -83,7 +83,7 @@ import re
 from datetime import datetime
 
 # Define the target MAC address
-target_mac = "2C:84:DD:00:68:90"
+target_mac = "EE:16:69:E1:50:24"
 
 # Read the log file
 with open(file_path, "r") as file:

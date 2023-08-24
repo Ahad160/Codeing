@@ -7,3 +7,6 @@ tp=(50,59,60,60,61,10)
 print(tp.count(60))
 
 print(tp.index(10))
+
+
+

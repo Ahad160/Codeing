@@ -1,5 +1,2 @@
-num=0
-for i in range(2,10,2):
-    num=num+i
-
-print(num)
+A=[1,2,3,4,5]
+print(len(A))
