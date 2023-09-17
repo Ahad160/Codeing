@@ -16,7 +16,7 @@ pyautogui.press("enter")
 
 time.sleep(1)
 
-pyautogui.typewrite("192.168.31.22")
+pyautogui.typewrite("192.168.31.165")
 pyautogui.press("tab")
 pyautogui.press("enter")
 
