@@ -17,6 +17,7 @@ public class _04_Switch_Case {
             
             default:
                 System.out.println("Battery is Full");
+                System.out.printf("");
         }
     }
     
