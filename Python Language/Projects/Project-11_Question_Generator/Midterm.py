@@ -58,7 +58,6 @@ with open(output_file_path, "a", encoding="UTF-8") as output_file:
     output_file.write(random_text)
 
 
-
 #//S_1
 # Create an empty list to store the random texts
 random_texts = []
