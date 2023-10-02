@@ -3,14 +3,30 @@ from moviepy.editor import VideoFileClip
 import os
 import shutil
 
+print("""\033[33m
+__   _______   _   _ _     _               ____  _________ _____  ______                    _                 _           
+\ \ / /_   _| | | | (_)   | |             / /  \/  || ___ \____ | |  _  \                  | |               | |          
+ \ V /  | |   | | | |_  __| | ___  ___   / /| .  . || |_/ /   / / | | | |_____      ___ __ | | ___   __ _  __| | ___ _ __ 
+  \ /   | |   | | | | |/ _` |/ _ \/ _ \ / / | |\/| ||  __/    \ \ | | | / _ \ \ /\ / / '_ \| |/ _ \ / _` |/ _` |/ _ \ '__|
+  | |   | |   \ \_/ / | (_| |  __/ (_) / /  | |  | || |   .___/ / | |/ / (_) \ V  V /| | | | | (_) | (_| | (_| |  __/ |   
+  \_/   \_/    \___/|_|\__,_|\___|\___/_/   \_|  |_/\_|   \____/  |___/ \___/ \_/\_/ |_| |_|_|\___/ \__,_|\__,_|\___|_|   
+                                                                                                                          
+                                                                                                                          
+\033[0m""")
+
 user=int(input("1.Download Youtube Video\n2.Convert YT Video To MP3 And Download\nSelect-"))
 
 if user==1:
     url=input("Enter URL:")
     Video_Intance=pytube.YouTube(url)
     steam=Video_Intance.streams.get_highest_resolution()
-    download_path = 'E:\Codeing\Python Language\Projects\P-13'
+    path=input("\033[32mDefult/Custom Path To Download [D/C]\033[0m")
+    if path=='D':
+        download_path = 'E:\Codeing\Python Language\Projects\Project_13_YT_Video_Download_Convert'
+    elif path=='C':
+        download_path = path  
     steam.download(output_path=download_path)
+    print("\033[31mYT Video Is Downloaded\033[0m\n")
 
 elif user==2:
 
