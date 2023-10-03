@@ -1,1 +1,1 @@
-user=input("1.Download Youtube Video\n2.Convert YT Video To MP3 And Download\nSelect-")
+user=int(input("\033[34mDownloader-\033[0m "))

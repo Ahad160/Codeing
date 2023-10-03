@@ -24,7 +24,8 @@ if user==1:
     if path=='D':
         download_path = 'E:\Codeing\Python Language\Projects\Project_13_YT_Video_Download_Convert'
     elif path=='C':
-        download_path = path  
+        path=input("\033[32mEnter Custom Path To Download\033[0m--")     
+        download_path = path
     steam.download(output_path=download_path)
     print("\033[31mYT Video Is Downloaded\033[0m\n")
 
