@@ -1,1 +1,2 @@
-user=int(input("\033[34mDownloader-\033[0m "))
+
+# Create an ArgumentParser object

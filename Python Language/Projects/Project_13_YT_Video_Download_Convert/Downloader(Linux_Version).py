@@ -25,7 +25,7 @@ parser = argparse.ArgumentParser(description="Download a file from a URL")
 parser.add_argument("-d", action="store_true", help="Download the file")
 parser.add_argument("-u", type=str, help="URL to download from")
 parser.add_argument("-cp", type=str, help="Custom Path to save the downloaded file")
-parser.add_argument("-dp", type=str, help="Defult Path to save the downloaded file")
+parser.add_argument("-dp", action="store_true", help="Default Path to save the downloaded file")
 
 
 # Prompt the user for the command line input
@@ -41,24 +41,18 @@ args = parser.parse_args(user_args)
 if args.d:
     if args.u:
         url = args.u
-    else:
-        print("Error in URL")
 
     Video_Intance=pytube.YouTube(url)
     steam=Video_Intance.streams.get_highest_resolution()
 
     if args.cp:
         path = args.cp
-    else:
-        print("Error in Path")
-
     
     if args.dp:
         path ='E:\Codeing\Python Language\Projects\Project_13_YT_Video_Download_Convert'
-    else:
-        print("Error in Path")
 
-    steam.download(output_path=path)
+    steam.download(path)
+    print(f"\033[32mDownloaded Is Completed And Save to: {path}\033[0m\n")  
 else:
     print("Error: -d option is required to initiate the download.")
 

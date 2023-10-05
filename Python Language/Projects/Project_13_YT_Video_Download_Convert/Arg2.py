@@ -1,12 +1,17 @@
 import argparse
 
+# Custom action to convert the argument to lowercase
+def lowercase_action(arg):
+    s=arg.lower
+    return s
+
 # Create an ArgumentParser object
 parser = argparse.ArgumentParser(description="Download a file from a URL")
 
 # Define the command-line arguments
 parser.add_argument("-d", action="store_true", help="Download the file")
 parser.add_argument("-u", type=str, help="URL to download from")
-parser.add_argument("-cp", type=str, help="Path to save the downloaded file")
+parser.add_argument("-cp", type=lowercase_action(str), help="Path to save the downloaded file")
 
 # Prompt the user for the command line input
 user_input = input("Enter the command line: ")

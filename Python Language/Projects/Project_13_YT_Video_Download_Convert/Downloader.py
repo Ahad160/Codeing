@@ -30,18 +30,22 @@ if user==1:
     print("\033[31mYT Video Is Downloaded\033[0m\n")
 
 elif user==2:
-
     url = input("Enter URL:")
     video_instance = pytube.YouTube(url)
     stream = video_instance.streams.get_highest_resolution()
     downloaded_file = stream.download()
 
-    # Specify the custom paths for downloaded video and converted MP3
-    downloaded_video_path = 'E:\Codeing\Python Language\Projects\P-13'
-    converted_mp3_path = 'E:\Codeing\Python Language\Projects\P-13'
+    path = input("\033[32mDefault/Custom Path To Download [D/C]\033[0m")
+
+    if path == 'D':
+        Video_Path = 'E:\Codeing\Python Language\Projects\Project_13_YT_Video_Download_Convert'
+        converted_mp3_path = 'E:\Codeing\Python Language\Projects\Project_13_YT_Video_Download_Convert'
+    elif path == 'C':
+        Video_Path = input("\033[32mEnter Custom Path To Download\033[0m--")
+        converted_mp3_path = Video_Path
 
     # Create the full file paths
-    downloaded_video_file = os.path.join(downloaded_video_path, os.path.basename(downloaded_file))
+    downloaded_video_file = os.path.join(Video_Path, os.path.basename(downloaded_file))
     output_mp3_file = os.path.join(converted_mp3_path, 'Converted.mp3')
 
     # Move the downloaded file to the custom directory
@@ -57,6 +61,9 @@ elif user==2:
     # Close the video and audio clips
     video_clip.close()
     audio_clip.close()
+
+    # Delete the downloaded video file
+    os.remove(downloaded_video_file)
 
     print(f"Video converted to MP3 and saved as '{output_mp3_file}'")
 
