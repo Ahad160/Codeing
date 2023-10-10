@@ -1,6 +1,8 @@
 import pyautogui
 import time
 import subprocess
+import re
+from datetime import datetime
 
 # Specify the full path to the Chrome executable
 chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
@@ -50,14 +52,14 @@ for i in range(0, 7):
 time.sleep(3)
 # Simulate pressing To save "System Log" files
 pyautogui.press("enter")
-time.sleep(2)
+time.sleep(3)
 pyautogui.typewrite("Router_Logfile.txt")  # log File Name
-time.sleep(2)
+time.sleep(3)
 pyautogui.hotkey("alt", "d")
-pyautogui.typewrite("E:/")  # log File Path
-pyautogui.hotkey("Esc")
+pyautogui.typewrite("E:\Codeing\Python Language\Projects\Project_8_TP-Router_LogFiles")  # log File Path
 pyautogui.press("enter")
 pyautogui.press("enter")
+
 
 
 # Simulate pressing "Log Out"➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
@@ -77,10 +79,8 @@ pyautogui.hotkey("ctrl", "w")
 print("Successfully Router Logfile Download")
 
 #Log Files Analings
-file_path = "E:\Router_Logfile.txt"
+file_path = "E:\Codeing\Python Language\Projects\Project_8_TP-Router_LogFiles\Router_Logfile.txt"
 
-import re
-from datetime import datetime
 
 # Define the target MAC address
 target_mac = "EE:16:69:E1:50:24"
