@@ -131,8 +131,14 @@ def list_drive_letters():
 
 drive_letters = list_drive_letters()
 
-file_path = f"{drive_letters[1]}\Database.txt"
-file_path_2 = f"{drive_letters[1]}\encryption_key.key"
+#Defile Path For Acutal Project
+# file_path = f"{drive_letters[1]}\Database.txt"
+# file_path_2 = f"{drive_letters[1]}\encryption_key.key"
+
+#Defile Path For Normal Run the program
+file_path = f"E:\Codeing\Python Language\Projects\Project_7_Password_Manager\Database.txt"
+file_path_2 = f"E:\Codeing\Python Language\Projects\Project_7_Password_Manager\encryption_key.key"
+
 
 # To Create The File
 if os.path.exists(file_path):
