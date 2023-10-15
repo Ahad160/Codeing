@@ -54,7 +54,7 @@ try:
 
         steam.download(path)
         print(f"\033[32mDownloaded Is Completed And Save to: {path}\033[0m\n")       
-    elif args.cp == None or args.d == None:
+    elif args.u == None and args.d == None:
         print("Error: -d Or -c or -u option is required to initiate the download.")
         exit()
 except Exception as Error:
