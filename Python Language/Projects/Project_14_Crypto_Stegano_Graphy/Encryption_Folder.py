@@ -42,6 +42,10 @@ def Encrypt():
 
     # Encrypt all files in the folder and its subfolders
     encrypt_folder(folder_path, key)
+    
+    #Charactar Padding  // Add one character in key
+    with open(key_file_path,'a') as file:
+        file=file.write("a")
 
     print("Encryption completed.")
 
