@@ -1,23 +1,30 @@
-from google.oauth2 import service_account
-from googleapiclient.discovery import build
-from googleapiclient.http import MediaFileUpload
+def Google_Drive_API(files):
+    from google.oauth2 import service_account
+    from googleapiclient.discovery import build
+    from googleapiclient.http import MediaFileUpload
 
-# Set up the service account credentials
-SCOPES = ['https://www.googleapis.com/auth/drive']
-SERVICE_ACCOUNT_FILE = r"E:\Codeing\Python Language\Projects\Project_14_Crypto_Stegano_Graphy\Credentials.json"
+    # Set up the service account credentials
+    SCOPES = ['https://www.googleapis.com/auth/drive']
+    SERVICE_ACCOUNT_FILE = r"E:\Codeing\Python Language\Projects\Project_14_Crypto_Stegano_Graphy\natural-cistern-402215-5165c4ec4ec6.json"
 
-credentials = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
-drive_service = build('drive', 'v3', credentials=credentials)
+    Credentials = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+    drive_service = build('drive', 'v3', credentials=Credentials)
 
-# Define the folder ID where you want to upload the file
-folder_id = '1SFIcQWqHiQrN94XVbkePvGGpjPE6tOAG'
+    # Extract the folder ID from the URL
+    Folder_URL = 'https://drive.google.com/drive/folders/1SFIcQWqHiQrN94XVbkePvGGpjPE6tOAG'
+    Folder_ID = Folder_URL.split('/')[-1]
 
-# Upload a file to Google Drive within the specified folder
-file_metadata = {
-    'name': 'example.txt',  # Name for the uploaded file
-    'parents': [folder_id],  # ID of the target folder
-}
-media = MediaFileUpload('E:\Codeing\Python Language\Projects\Project_14_Crypto_Stegano_Graphy\Project-14_Encrypting.key', mimetype='text/plain')
-file = drive_service.files().create(body=file_metadata, media_body=media).execute()
+    # Upload a File to Google Drive within the specified folder
+    File_Metadata = {
+        'name': 'Encrypting.key',  # Name for the uploaded File
+        'parents': [Folder_ID],  # ID of the target folder
+    }
+    Upload=files
+    Media = MediaFileUpload(Upload, mimetype='text/plain')
+    File = drive_service.files().create(body=File_Metadata, media_body=Media).execute()
 
-print(f'File ID: {file.get("id")}')
+    print(f'File ID: {File.get("id")}')
+
+
+
+

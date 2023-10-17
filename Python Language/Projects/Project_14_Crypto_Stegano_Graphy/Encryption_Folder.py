@@ -1,4 +1,4 @@
-def Encrypt():
+def Encrypt(Folder_Path):
     import os
     from cryptography.fernet import Fernet
 
@@ -32,7 +32,7 @@ def Encrypt():
                 os.remove(file_path)  # Remove the original file if you want to replace it
 
     # Specify the folder path where you want to encrypt files
-    folder_path = r'E:\Codeing\Python Language\Projects\Project_14_Crypto_Stegano_Graphy\User_Data'
+    folder_path = Folder_Path
 
     # Specify the path for the encryption key file
     key_file_path = 'E:\Codeing\Python Language\Projects\Project_14_Crypto_Stegano_Graphy\Project-14_Encrypting.key'
@@ -49,4 +49,5 @@ def Encrypt():
 
     print("Encryption completed.")
 
+    return key_file_path
 

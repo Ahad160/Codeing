@@ -27,3 +27,5 @@ def Embed_message(audio_file, message, output_file):
     result_audio.export(output_file, format="wav")
     
     print("Message hidden securely.")
+    
+    return output_file
