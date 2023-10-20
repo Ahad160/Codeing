@@ -38,7 +38,7 @@ def Encrypt():
     folder_path = 'E:\Codeing\Python Language\Projects\Project_12_Folder_Encryption_(LOCK)\.Lock.encrypted'
 
     # Specify the path for the encryption key file
-    key_file_path = 'E:\Codeing\Python Language\key_file.key'
+    key_file_path = 'E:\Codeing\Python Language\Projects\Project_12_Folder_Encryption_(LOCK)\key_file.key'
 
     # Generate or load the encryption key
     key = Generate_Key(key_file_path)

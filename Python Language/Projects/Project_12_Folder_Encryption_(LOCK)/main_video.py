@@ -8,7 +8,7 @@ def Recongntion(user):
 
     # Encode faces from a folder
     sfr = SimpleFacerec()
-    sfr.load_encoding_images("images/")
+    sfr.load_encoding_images(r"E:\Codeing\Python Language\Projects\Project_12_Folder_Encryption_(LOCK)\images")
 
     # Load Camera
     cap = cv2.VideoCapture(0)

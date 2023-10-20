@@ -1,9 +1,11 @@
 # Open file 1 containing board rolls and CGPA
-with open("GAI_CGPA.txt", "r") as f1:
+gai_CGPA=r'E:\Codeing\Python Language\Projects\Project_6_Extract_CGPA_&_Rolls\Main.Files\GAI_CGPA.txt'
+with open(gai_CGPA, "r") as f1:
     board_cgpa = f1.readlines()
 
 # Open file 2 containing names and board rolls
-with open("ALL_Roll.txt", "r") as f2:
+My_Class_Rolls=r'E:\Codeing\Python Language\Projects\Project_6_Extract_CGPA_&_Rolls\Main.Files\ALL_Roll.txt'
+with open(My_Class_Rolls, "r") as f2:
     board_names_rolls = f2.readlines()
 
 
@@ -16,8 +18,10 @@ for line in board_names_rolls:
         name = values[0]
         roll_name_dict[roll] = name
 
+passed_txt=r'E:\Codeing\Python Language\Projects\Project_6_Extract_CGPA_&_Rolls\Main.Files\Pass.txt'
+
 # Open file 3 to write matching names, rolls, and CGPA
-with open("file3.txt", "w") as f3:
+with open(passed_txt, "w") as f3:
     # Iterate over board rolls and CGPA in file 1
     for line in board_cgpa:
         # Extract roll and CGPA (if available)
