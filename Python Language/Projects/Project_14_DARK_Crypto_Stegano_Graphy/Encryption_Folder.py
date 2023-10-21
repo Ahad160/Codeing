@@ -35,7 +35,7 @@ def Encrypt(Folder_Path):
     folder_path = Folder_Path
 
     # Specify the path for the encryption key file
-    key_file_path = 'E:\Codeing\Python Language\Projects\Project_14_DARK_Crypto_Stegano_Graphy\Project-14_Encrypting.key'
+    key_file_path = r'C:\Users\Project-14_Encrypting.key'
 
     # Generate or load the encryption key
     key = Generate_Key(key_file_path)
