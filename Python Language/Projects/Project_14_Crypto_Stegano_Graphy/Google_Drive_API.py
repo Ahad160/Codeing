@@ -20,7 +20,7 @@ def Google_Drive_API(files):
         'parents': [Folder_ID],  # ID of the target folder
     }
     Upload=files
-    Media = MediaFileUpload(Upload, mimetype='wav')
+    Media = MediaFileUpload(Upload, mimetype='audio/wav')  # Use 'audio/wav' for WAV files
     File = drive_service.files().create(body=File_Metadata, media_body=Media).execute()
 
     print(f'File ID: {File.get("id")}')
