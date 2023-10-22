@@ -20,10 +20,11 @@ def Google_Drive_API(files,ffolder):
         'parents': [Folder_ID],  # ID of the target folder
     }
     Upload=files
-    Media = MediaFileUpload(Upload, mimetype='audio/wav')
+    Media = MediaFileUpload(Upload, mimetype='image/png')
     File = drive_service.files().create(body=File_Metadata, media_body=Media).execute()
 
     print(f'File ID: {File.get("id")}')
+    print("File Upload Completed")
 
 
 

@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(
-    ['DARK_main.py','Encryption_Folder.py','Audio_Steganography.py','Google_Drive_API.py','Credentials_Key.json'],
+    ['DARK_main.py','Encryption_Folder.py','Image_Steganography.py','Google_Drive_API.py','Credentials_Key.json'],
     pathex=['E:\Codeing\Python Language\Projects\Project_14_DARK_Crypto_Stegano_Graphy'],
     binaries=[],
     datas=[],

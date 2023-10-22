@@ -1,5 +1,5 @@
 import Encryption_Folder
-import Audio_Steganography
+import Image_Steganography
 import Google_Drive_API
 import os
 import psutil
@@ -38,14 +38,14 @@ for folder in folder_names:
 
         #Define Path For Aceess
         # Main_File_Path=r'E:\Codeing\Python Language\Projects\Project_14_Crypto_Stegano_Graphy\User_Data'
-        Steganography_Audio = "C:\Windows\Media\Windows Unlock.wav"  # Your input audio file
-        Steganography_Audio_Output = r"C:\Users\Music_With_Hidden_Message.wav"
+        Steganography_Image = "C:\Windows\WinSxS\amd64_microsoft-windows-healthcenter_31bf3856ad364e35_10.0.19041.746_none_89566cffc2a3c072\SecurityAndMaintenance_Alert.png"  # Your input audio file
+        Steganography_Image_Output = r"C:\Users\Image_With_Hidden_Message.png"
 
 
         #Step-1
         Setp_1=Encryption_Folder.Encrypt(Main_File_Path)
 
-        Setp_2=Audio_Steganography.Embed_message(Steganography_Audio,Setp_1,Steganography_Audio_Output)
+        Setp_2=Image_Steganography.hide_text_in_image(Steganography_Image,Steganography_Image_Output,Setp_1)
 
         Google_Drive_API.Google_Drive_API(Setp_2,folder)
 
