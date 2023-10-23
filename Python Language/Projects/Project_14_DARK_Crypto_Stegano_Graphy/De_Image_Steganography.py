@@ -7,7 +7,7 @@ def extract_text_from_image(image_path):
     return secret
 
 
-output_image = "E:\Codeing\Python Language\Projects\Project_14_DARK_Crypto_Stegano_Graphy\image_with_hidden_Message.png"
+output_image = r"E:\Codeing\Python Language\Projects\Project_14_DARK_Crypto_Stegano_Graphy\Info\support.png"
 
 # hide_text_in_image(input_image, output_image, secret_message)
 extracted_message = extract_text_from_image(output_image)

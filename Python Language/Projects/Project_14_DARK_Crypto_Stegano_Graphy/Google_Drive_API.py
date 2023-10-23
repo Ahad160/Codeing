@@ -1,11 +1,11 @@
-def Google_Drive_API(files,ffolder):
+def Google_Drive_API(files,ffolder,Api):
     from google.oauth2 import service_account
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
 
     # Set up the service account credentials
     SCOPES = ['https://www.googleapis.com/auth/drive']
-    SERVICE_ACCOUNT_FILE = r"E:\Codeing\Python Language\Projects\Project_14_DARK_Crypto_Stegano_Graphy\Credentials_Key.json"
+    SERVICE_ACCOUNT_FILE = Api
 
     Credentials = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
     drive_service = build('drive', 'v3', credentials=Credentials)
