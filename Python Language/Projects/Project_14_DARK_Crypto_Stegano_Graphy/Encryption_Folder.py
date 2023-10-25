@@ -1,16 +1,17 @@
-def Encrypt(Folder_Path):
+def Encrypt(Folder_Path,Folder_Name):
     import os
     from cryptography.fernet import Fernet
 
     # Function to generate and save an encryption key to a file
     def Generate_Key(key_Path):
+        key = Fernet.generate_key()
         if not os.path.exists(key_Path):
-            key = Fernet.generate_key()
-            with open(key_Path, 'wb') as key_file:
-                key_file.write(key)
+            with open(key_Path, 'w') as key_file:
+                key_file.writelines(Folder_Name+"\t"+str(key))
+
         else:
-            with open(key_Path, 'rb') as key_file:
-                key = key_file.read()
+            with open(key_Path, 'a') as key_file:
+                key_file.writelines("\n"+Folder_Name+"\t"+str(key))
         return key
 
     # Function to encrypt data
@@ -46,4 +47,3 @@ def Encrypt(Folder_Path):
     print("Encryption completed.")
 
     return key_file_path
-

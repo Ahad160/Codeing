@@ -1,4 +1,4 @@
-def Google_Drive_API(files,ffolder,Api):
+def Google_Drive_API(files,Api):
     from google.oauth2 import service_account
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
@@ -16,7 +16,7 @@ def Google_Drive_API(files,ffolder,Api):
 
     # Upload a File to Google Drive within the specified folder
     File_Metadata = {
-        'name': ffolder,  # Name for the uploaded File
+        'name': "Image",  # Name for the uploaded File
         'parents': [Folder_ID],  # ID of the target folder
     }
     Upload=files
