@@ -55,34 +55,34 @@ class AttackAll(object):
 
         attacks = []
 
-        if Configuration.use_eviltwin:
-            # TODO: EvilTwin attack
-            pass
+        # if Configuration.use_eviltwin: #⭕
+        #     # TODO: EvilTwin attack
+        #     pass
 
-        elif 'WEP' in target.encryption:
-            attacks.append(AttackWEP(target))
+        # elif 'WEP' in target.encryption: #⭕
+        #     attacks.append(AttackWEP(target))
 
-        elif 'WPA' in target.encryption:
+        if 'WPA' in target.encryption:
             # WPA can have multiple attack vectors:
 
-            # WPS
-            if not Configuration.use_pmkid_only and target.wps is WPSState.UNLOCKED and AttackWPS.can_attack_wps():
-                # Pixie-Dust
-                if Configuration.wps_pixie:
-                    attacks.append(AttackWPS(target, pixie_dust=True))
+            # # WPS
+            # if not Configuration.use_pmkid_only and target.wps is WPSState.UNLOCKED and AttackWPS.can_attack_wps(): #⭕
+            #     # Pixie-Dust
+            #     if Configuration.wps_pixie:
+            #         attacks.append(AttackWPS(target, pixie_dust=True))
 
-                # Null PIN zero-day attack
-                if Configuration.wps_pin:
-                    attacks.append(AttackWPS(target, pixie_dust=False, null_pin=True))
+            #     # Null PIN zero-day attack
+            #     if Configuration.wps_pin:
+            #         attacks.append(AttackWPS(target, pixie_dust=False, null_pin=True))
 
-                # PIN attack
-                if Configuration.wps_pin:
-                    attacks.append(AttackWPS(target, pixie_dust=False))
+            #     # PIN attack
+            #     if Configuration.wps_pin: 
+            #         attacks.append(AttackWPS(target, pixie_dust=False))
 
             if not Configuration.wps_only:
                 # PMKID
-                attacks.append(AttackPMKID(target))
-
+                # attacks.append(AttackPMKID(target)) #⭕  ♻️
+                
                 # Handshake capture
                 if not Configuration.use_pmkid_only:
                     attacks.append(AttackWPA(target))
