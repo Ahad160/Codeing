@@ -3,6 +3,9 @@
 
 import sys
 
+# A=emoji.emojize(':warning:')
+# print(A)
+
 
 class Color(object):
     """ Helper object for easily printing colored text to the terminal. """
@@ -11,19 +14,21 @@ class Color(object):
     colors = {
         'W': '\033[0m',   # white (normal)
         'R': '\033[31m',  # red
-        'G': '\033[32m',  # green
+        # 'G': '\033[32m',  # green   	\x1b[38;5;46m
+        'G': '\x1b[38;5;46m',  # green   	
         'O': '\033[33m',  # orange
+        'O>': '\x1b[38;5;220m',  # orange
         'B': '\033[34m',  # blue
         'P': '\033[35m',  # purple
-        'C': '\033[36m',  # cyan
+        'C': '\x1b[38;5;51m',  # cyan
         'GR': '\033[37m',  # gray
         'D': '\033[2m'    # dims current color. {W} resets.
     }
-
+    #🔴🟢🟡
     # Helper string replacements
     replacements = {
         '{+}': ' {W}{D}[{W}{G}+{W}{D}]{W}',
-        '{!}': ' {O}[{R}!{O}]{W}',
+        '{!}': ' {G}({G}✔️{G}){W}',
         '{?}': ' {W}[{C}?{W}]'
     }
 
