@@ -18,10 +18,11 @@ class Color(object):
         'G': '\x1b[38;5;46m',  # green   	
         'O': '\033[33m',  # orange
         'O>': '\x1b[38;5;220m',  # orange
-        'B': '\033[34m',  # blue
+        'B': '\033[34m',
+        'BL': '\x1b[38;5;226m',  # blue
         'P': '\033[35m',  # purple
         'C': '\x1b[38;5;51m',  # cyan
-        'GR': '\033[37m',  # gray
+        'GR': '\x1b[38;5;27m',  # gray
         'D': '\033[2m'    # dims current color. {W} resets.
     }
     #🔴🟢🟡

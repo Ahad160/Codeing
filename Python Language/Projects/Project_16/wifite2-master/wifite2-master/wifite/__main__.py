@@ -66,6 +66,22 @@ class Wifite(object):
         Color.pl(r' {G}`.  ·  `{GR}{D} /¯\ {W}{G}´  ·  .´  {W}{D}Modified by Raiden{W}')
         Color.pl(r' {G}  `     {GR}{D}/¯¯¯\{W}{G}     ´    ')
         Color.pl('')
+        Color.pl(r'{GR}                     *                 *          ')      
+        Color.pl(r'                    ***                ***              ')
+        Color.pl(r'                   **  ***          ***  **             ')
+        Color.pl(r'                  **  **   |      |   **  **            ')
+        Color.pl(r'                 **  **  ***  **  ***  **  **           ')
+        Color.pl(r'                 **  *   **  ----  **  **  **           ')
+        Color.pl(r'                 **  **  **  ----  **  **  **           ')
+        Color.pl(r'                 **  **   **  **   **  **  **           ')
+        Color.pl(r'                  **  **   *|    |*   **  **            ')
+        Color.pl(r'                   **  ***  --  --  ***  **             ')
+        Color.pl(r'                    ***    //    \\    ***              ')
+        Color.pl(r'                     *    //      \\   *                ')
+        Color.pl(r'                         //        \\{BL}{BL}                   ')
+        Color.pl(r'                        //          \\{BL}{BL}                   ')
+        Color.pl(r'                       //            \\{BL}{BL}                  ')
+        Color.pl(r'                      /                \{BL}{BL}                 ') 
 
     @staticmethod
     def scan_and_attack():
