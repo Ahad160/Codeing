@@ -13,7 +13,8 @@ class Color(object):
     # Basic console colors
     colors = {
         'W': '\033[0m',   # white (normal)
-        'R': '\033[31m',  # red
+        'R': '\033[31m',
+        'RR': '\x1b[38;5;196m',  # red
         # 'G': '\033[32m',  # green   	\x1b[38;5;46m
         'G': '\x1b[38;5;46m',  # green   	
         'O': '\033[33m',  # orange
@@ -28,9 +29,9 @@ class Color(object):
     #🔴🟢🟡
     # Helper string replacements
     replacements = {
-        '{+}': ' {W}{D}[{W}{G}+{W}{D}]{W}',
-        '{!}': ' {G}({G}✔️{G}){W}',
-        '{?}': ' {W}[{C}?{W}]'
+        '{+}': ' {G}({G}✔️{G}){W}',
+        '{!}': ' {RR}({RR}✖️{RR}){W}',
+        '{?}': ' {W}({C}?{W})'
     }
 
     last_sameline_length = 0

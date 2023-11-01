@@ -103,6 +103,7 @@ class AttackWPA(Attack):
 
             self.clients = []
 
+            """
             # Try to load existing handshake
             if not Configuration.ignore_old_handshakes:
                 bssid = airodump_target.bssid
@@ -113,9 +114,11 @@ class AttackWPA(Attack):
                                   'found {G}existing handshake{W} for {C}%s{W}' % handshake.essid)
                     Color.pl('\n{+} Using handshake from {C}%s{W}' % handshake.capfile)
                     return handshake
+            """        
 
             timeout_timer = Timer(Configuration.wpa_attack_timeout)
             deauth_timer = Timer(Configuration.wpa_deauth_timeout)
+
 
             while handshake is None and not timeout_timer.ended():
                 step_timer = Timer(1)
@@ -125,7 +128,7 @@ class AttackWPA(Attack):
                               'Handshake capture',
                               'Listening. (clients:{G}%d{W}, deauth:{O}%s{W}, timeout:{R}%s{W})' % (
                                   len(self.clients), deauth_timer, timeout_timer))
-
+                """
                 # Find .cap file
                 cap_files = airodump.find_files(endswith='.cap')
                 if len(cap_files) == 0:
@@ -151,11 +154,11 @@ class AttackWPA(Attack):
                                   '{G}Captured handshake{W}')
                     Color.pl('')
                     break
-
+                """
                 # There is no handshake
                 handshake = None
                 # Delete copied .cap file in temp to save space
-                os.remove(temp_file)
+                #os.remove(temp_file) 
 
                 # Look for new clients
                 airodump_target = self.wait_for_target(airodump)

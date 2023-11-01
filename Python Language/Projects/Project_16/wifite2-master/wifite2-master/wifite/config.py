@@ -147,8 +147,8 @@ class Configuration(object):
 
         # WPA variables
         cls.wpa_filter = False  # Only attack WPA networks
-        cls.wpa_deauth_timeout = 15  # Wait time between deauths
-        cls.wpa_attack_timeout = 300  # Wait time before failing
+        cls.wpa_deauth_timeout = 10  # Wait time between deauths#♻️
+        cls.wpa_attack_timeout = 3600  # Wait time before failing #♻️
         cls.wpa_handshake_dir = 'hs'  # Dir to store handshakes
         cls.wpa_strip_handshake = False  # Strip non-handshake packets
         cls.ignore_old_handshakes = False  # Always fetch a new handshake

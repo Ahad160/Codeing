@@ -54,7 +54,7 @@ class Wifite(object):
             CrackHelper.run()
 
         else:
-            # Configuration.get_monitor_mode_interface() #⭕
+            Configuration.get_monitor_mode_interface()
             self.scan_and_attack()
 
     @staticmethod
@@ -66,22 +66,22 @@ class Wifite(object):
         Color.pl(r' {G}`.  ·  `{GR}{D} /¯\ {W}{G}´  ·  .´  {W}{D}Modified by Raiden{W}')
         Color.pl(r' {G}  `     {GR}{D}/¯¯¯\{W}{G}     ´    ')
         Color.pl('')
-        Color.pl(r'{GR}                     *                 *          ')      
-        Color.pl(r'                    ***                ***              ')
-        Color.pl(r'                   **  ***          ***  **             ')
-        Color.pl(r'                  **  **   |      |   **  **            ')
-        Color.pl(r'                 **  **  ***  **  ***  **  **           ')
-        Color.pl(r'                 **  *   **  ----  **  **  **           ')
-        Color.pl(r'                 **  **  **  ----  **  **  **           ')
-        Color.pl(r'                 **  **   **  **   **  **  **           ')
-        Color.pl(r'                  **  **   *|    |*   **  **            ')
-        Color.pl(r'                   **  ***  --  --  ***  **             ')
-        Color.pl(r'                    ***    //    \\    ***              ')
-        Color.pl(r'                     *    //      \\   *                ')
-        Color.pl(r'                         //        \\{BL}{BL}                   ')
-        Color.pl(r'                        //          \\{BL}{BL}                   ')
-        Color.pl(r'                       //            \\{BL}{BL}                  ')
-        Color.pl(r'                      /                \{BL}{BL}                 ') 
+        Color.pl(r'{GR}            *                  *          ')      
+        Color.pl(r'           ***                ***              ')
+        Color.pl(r'          **  ***          ***  **             ')
+        Color.pl(r'         **  **   *{BL}|    |{BL}{GR}*   **  **            ')
+        Color.pl(r'        **  **  ***  **  ***  **  **           ')
+        Color.pl(r'        **  *   **  {BL}|--|{BL}{GR}  **  **  **           ')
+        Color.pl(r'        **  **  **  {BL}|--|{BL}{GR}  **  **  **           ')
+        Color.pl(r'        **  **   **  **   **  **  **           ')
+        Color.pl(r'         **  **   *{BL}|    {BL}|{GR}*{GR}   **{GR}  **{GR}{BL}            ')
+        Color.pl(r'          {GR}**  ***{GR}  {BL}--  --{BL}  {GR}***{GR}  **{GR}{BL}             ')
+        Color.pl(r'           {GR}***{GR}    {BL}//    \\{BL}    {GR}***{GR}{BL}              ')
+        Color.pl(r'            {GR}*{GR}    {BL}//      \\{BL}{GR}   *{BL}                ')
+        Color.pl(r'                {BL}{BL}//        \\{BL}{BL}                   ')
+        Color.pl(r'               {BL}{BL}//          \\{BL}{BL}                   ')
+        Color.pl(r'              {BL}{BL}//            \\{BL}{BL}                  ')
+        Color.pl(r'             {BL}{BL}/                \{BL}{BL}                 ') 
 
     @staticmethod
     def scan_and_attack():
