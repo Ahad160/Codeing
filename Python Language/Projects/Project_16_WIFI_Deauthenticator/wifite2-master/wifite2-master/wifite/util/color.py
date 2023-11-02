@@ -13,24 +13,22 @@ class Color(object):
     # Basic console colors
     colors = {
         'W': '\033[0m',   # white (normal)
-        'R': '\033[31m',
-        'RR': '\x1b[38;5;196m',  # red
-        # 'G': '\033[32m',  # green   	\x1b[38;5;46m
+        'R': '\x1b[38;5;196m', # Red
         'G': '\x1b[38;5;46m',  # green   	
         'O': '\033[33m',  # orange
         'O>': '\x1b[38;5;220m',  # orange
         'B': '\033[34m',
-        'BL': '\x1b[38;5;226m',  # blue
+        'BR': '\x1b[38;5;226m',  # blue
         'P': '\033[35m',  # purple
         'C': '\x1b[38;5;51m',  # cyan
-        'GR': '\x1b[38;5;27m',  # gray
+        'GR': '\x1b[38;5;27m',  # Yellow
         'D': '\033[2m'    # dims current color. {W} resets.
     }
     #🔴🟢🟡
     # Helper string replacements
     replacements = {
         '{+}': ' {G}({G}✔️{G}){W}',
-        '{!}': ' {RR}({RR}✖️{RR}){W}',
+        '{!}': ' {R}({R}✖️{R}){W}',
         '{?}': ' {W}({C}?{W})'
     }
 
@@ -61,7 +59,7 @@ class Color(object):
     def pe(text):
         """
         Prints text using colored format with
-        leading and trailing new line to STDERR.
+        leading and trailing new line to STDER.
         """
         sys.stderr.write(Color.s('%s\n' % text))
         Color.last_sameline_length = 0
