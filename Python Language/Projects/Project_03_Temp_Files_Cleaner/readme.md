@@ -19,6 +19,7 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 
 
 
+
 ## How to Use
 
 Always Run exe or program with Run as Administrator
