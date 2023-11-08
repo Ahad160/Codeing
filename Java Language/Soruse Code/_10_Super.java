@@ -6,7 +6,7 @@ class Prarent{
             System.out.printf("This is a Funtions1\n");
     }
     public void Funtion2(){
-            System.out.printf("This is a Funtions1\n");
+            System.out.printf("This is a Funtions2\n");
     }
     
 }
@@ -28,6 +28,8 @@ public class _10_Super {
     public static void main(String[] args) {
         // Prarent object = new Prarent();
         Child object2 = new Child(7);
+
+        object2.Funtion1();
 
         
       
