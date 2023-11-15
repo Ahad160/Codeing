@@ -1,23 +1,37 @@
 import java.util.Scanner;
-class Parent{
-    String[] value;
+import javax.print.DocFlavor.STRING;
 
-    public Parent(String[] Array){
-         this.value= Array;
+import java.util.ArrayList;
+class Parent{
+
+    public ArrayList<String> Array;
+    public Scanner input;
+    
+    public Parent(ArrayList<String> aL,Scanner input){
+        this.Array=aL;
+        this.input=input;
     }
     public void AddBook(){
-        System.out.printf("");
+        System.out.printf("Which Book You Add -->");
+        String user = input.next();
+        Array.add(user);
+    
     }
     public void Issued_Book(){
-        nt[] newArray = removeElement()
+        System.out.printf("Which Book You want to Borrow -->");
+        String user = input.next();
+        Array.remove(user);
+        
     }
     public void Show_Available_Books(){
-        for(String element:value){
+        for(String element:Array){
             System.out.printf("%s\n",element);
         }
     }
     public void ReturnBook(){
-        
+        System.out.printf("Which Book You want to Return -->");
+        String user = input.next();
+        Array.add(user);
     }
 }
 
@@ -27,12 +41,26 @@ public class _10_Ex_Online_Library {
     //     Methods: addBook, issueBook, returnBook, showAvailableBooks
     //     Properties: Array to store the available books,
     //                 Array to store the issued books
-        int Issued_Books [] = {};
-        String Available_Books [] = {"DSA","Java","Web","ELC-2","CP"};
-        
-        Parent object = new Parent(Available_Books);
+        Scanner input = new Scanner(System.in);
+        ArrayList<String> AL = new ArrayList<>();
 
+        AL.add("DSA");
+        AL.add("Java");
+        AL.add("Web");
+        AL.add("ELC-2");
+        AL.add("CP");
+
+        Parent object = new Parent(AL,input);
+
+
+
+        // int Issued_Books [] = {};
+
+        
         object.Show_Available_Books();
+        object.Issued_Book();
+        object.Show_Available_Books();
+
 
 
         
