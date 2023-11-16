@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import javax.print.DocFlavor.STRING;
-
 import java.util.ArrayList;
 class Parent{
 
@@ -24,6 +22,7 @@ class Parent{
         
     }
     public void Show_Available_Books(){
+        System.out.printf("\n\n");  //For Looking Good
         for(String element:Array){
             System.out.printf("%s\n",element);
         }
@@ -53,16 +52,22 @@ public class _10_Ex_Online_Library {
         Parent object = new Parent(AL,input);
 
 
+        for(int i=1;i>0;i++){
+            System.out.printf("\n\n1.Show Available Books\n2.Add Books\n3.Issued Book\n4.Return Book\nSelect Any Option --> ");
+            int user = input.nextInt();
+            if (user==1) {
+                object.Show_Available_Books();
+            }
+            else if(user==2) {
+                object.AddBook();
+            }
+            else if(user==3) {
+                object.Issued_Book();
+            }
+            else if(user==4) {
+                object.ReturnBook();
+            }
+        }
 
-        // int Issued_Books [] = {};
-
-        
-        object.Show_Available_Books();
-        object.Issued_Book();
-        object.Show_Available_Books();
-
-
-
-        
     }
 }
