@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "_10_pr_Circle_Class_To_Cylinder_Class",
+            "request": "launch",
+            "mainClass": "_10_pr_Circle_Class_To_Cylinder_Class",
+            "projectName": "Codeing_1cffff3b"
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
