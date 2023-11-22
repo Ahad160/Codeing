@@ -1,0 +1,1 @@
+copy /b {image_name}+{zipfile_name} {new_png_name}
