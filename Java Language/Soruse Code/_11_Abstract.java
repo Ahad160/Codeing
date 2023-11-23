@@ -4,16 +4,24 @@ abstract class Prarent{
     }
     abstract public void Greet();
 }
-abstract class Child extends Prarent{
+class Child extends Prarent{
     @Override
     public void Greet(){
         System.out.printf("Greeting From Child Class");
     }
 }
+abstract class Child2 extends Prarent{
+    public void Wellcome(){
+        System.out.printf("Wellcome From Child2 Class");
+    }
+}
 
 public class _11_Abstract {
  public static void main(String[] args) {
-    
+    Child object = new Child(); // it will work
+    // Child2 object2 = new Child2(); // Abstract Class cant be object
+
+    object.Greet();
  }
     
 }
