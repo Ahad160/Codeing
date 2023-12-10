@@ -16,7 +16,7 @@ pyautogui.press("enter")
 
 time.sleep(1)
 
-pyautogui.typewrite("192.168.0.108")
+pyautogui.typewrite("192.168.0.108") #🔴 Enter Youer Target PC IP Address
 pyautogui.press("tab")
 pyautogui.press("enter")
 
