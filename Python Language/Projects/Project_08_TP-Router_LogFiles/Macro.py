@@ -56,9 +56,9 @@ time.sleep(3)
 pyautogui.typewrite("Router_Logfile.txt")  # log File Name
 time.sleep(3)
 pyautogui.hotkey("alt", "d")
-pyautogui.typewrite("E:\Codeing\Python Language\Projects\Project_8_TP-Router_LogFiles")  # log File Path
+pyautogui.typewrite("E:\Codeing\Python Language\Projects\Project_08_TP-Router_LogFiles")  # log File Path
 pyautogui.press("enter")
-pyautogui.press("enter")
+pyautogui.hotkey("alt", "s")
 
 
 
@@ -78,12 +78,13 @@ pyautogui.hotkey("ctrl", "w")
 
 print("Successfully Router Logfile Download")
 
-#Log Files Analings
-file_path = "E:\Codeing\Python Language\Projects\Project_8_TP-Router_LogFiles\Router_Logfile.txt"
+
+#🔴 Enter Youer A Specific Download Path
+file_path = r"E:\Codeing\Python Language\Projects\Project_08_TP-Router_LogFiles\Router_Logfile.txt"
 
 
-# Define the target MAC address
-target_mac = "EE:16:69:E1:50:24"
+
+target_mac = "EE:16:69:E1:50:24"  #🔴 Enter Youer Target PC MAC Address
 
 # Read the log file
 with open(file_path, "r") as file:
