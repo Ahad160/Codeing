@@ -1,0 +1,1270 @@
+
+James
+Robert
+John
+Michael
+David
+ pyw
+time.sleep(3)
+https://www.ssa.gov/oact/babynames/decades/century.html
+
+E:\Codeing\Python Language\Projects\Project_15_C
+
+E:\Codeing\Python Language\Projects\Project_15_C
+
+E:\Codeing\Python Language\Projects\Project_15_C
+
+E:\Codeing\Python Language\Projects\Project_15_C
+
+E:\Codeing\Python Language\Projects\Project_15_C
+https://www.youtube.com/watch?v=h3ij6l3w-Eg
+un as background processes or services without displaying a console window.
+E:\Codeing\Python Language\Projects\Project_15_Clipboard_Copy\clipboard_history.txt
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+Software\Microsoft\Windows\CurrentVersion\Run
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+import os
+import sys
+import ctypes
+import winreg
+
+def add_to_startup():
+    # Get the path to the current script
+    script_path = os.path.abspath(sys.argv[0])
+
+    # Create the registry key for the startup entry
+    key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    key_name = "MyPythonScript"
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, script_path)
+        print(f"Added to startup: {script_path}")
+    except Exception as e:
+        print(f"Error adding to startup: {e}")
+
+if __name__ == "__main__":
+    # Check if running with administrative privileges
+    if not ctypes.windll.shell32.IsUserAnAdmin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    # Add the script to startup
+    add_to_startup()
+
+r"C:\Users\Image_With_Hidden_Message.png
+Clt
+r"C:\Users\Image_With_Hidden_Message.png
+CL_Clipboard .pyw
+E:\Codeing\Python Language\Projects\Project_15_Clipboard_Copy\Client\CL_startup.py
+E:\Codeing\Python Language\Projects\Project_15_Clipboard_Copy\Client\CL_Clipboard .py
+Client
+E:\Codeing\Python Language\Projects\Project_15_Clipboard_Copy\Client
+Python Language\Projects\Project_15_Clipboard_Copy\Client
+CL_Clipboard 
+Clipboard():

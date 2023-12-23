@@ -1,0 +1,8 @@
+{
+    "python.defaultInterpreterPath": "E:\\Software\\Python",
+    "workbench.colorCustomizations": {
+        "terminal.foreground": "#3cff00",
+        "terminalCursor.foreground": "#ff0000b0",
+
+    }
+}
