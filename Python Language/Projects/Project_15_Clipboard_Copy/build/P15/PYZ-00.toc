@@ -1,10 +1,6 @@
 ('E:\\Codeing\\Python '
- 'Language\\Projects\\Project_15_Clipboard_Copy\\build\\p15\\PYZ-00.pyz',
- [('Clipboard_C',
-   'E:\\Codeing\\Python '
-   'Language\\Projects\\Project_15_Clipboard_Copy\\Clipboard_C.py',
-   'PYMODULE'),
-  ('_compat_pickle',
+ 'Language\\Projects\\Project_15_Clipboard_Copy\\build\\P15\\PYZ-00.pyz',
+ [('_compat_pickle',
    'E:\\Software\\Python\\Lib\\_compat_pickle.py',
    'PYMODULE'),
   ('_compression', 'E:\\Software\\Python\\Lib\\_compression.py', 'PYMODULE'),
