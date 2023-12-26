@@ -28,7 +28,7 @@ def check_clipboard():
     finally:
         win32clipboard.CloseClipboard()
 
- 
+
 # Break For 10 Sec
 time.sleep(10 )
 
