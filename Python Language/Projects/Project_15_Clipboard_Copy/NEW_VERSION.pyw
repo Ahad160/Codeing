@@ -2,7 +2,7 @@ import pyperclip
 import time
 
 
-HISTORY_FILE = r"E:\Codeing\Python Language\Projects\Project_15_Clipboard_Copy\clipboard_history.txt"
+HISTORY_FILE = r"E:\clipboard_history.txt"
 
 def update_history(text):
     try:

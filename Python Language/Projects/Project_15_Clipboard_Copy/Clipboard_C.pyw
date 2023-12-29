@@ -2,7 +2,7 @@ import time
 import win32clipboard
 
 
-HISTORY_FILE = r"C:\Users\clipboard_history.txt"
+HISTORY_FILE = r"E:\clipboard_history.txt"
 
 def update_history(text):
     try:
