@@ -46,7 +46,7 @@ if run_as_admin():
 
         drive_letters = list_drive_letters()
 
-        print(drive_letters[1])
+        # print(drive_letters[1])
 
         A=drive_letters[1]
 

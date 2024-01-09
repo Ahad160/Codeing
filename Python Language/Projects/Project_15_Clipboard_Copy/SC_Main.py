@@ -65,7 +65,6 @@ if run_as_admin():
 
 
     #  move_exe_file Fuction 🟡
-    # Get the directory of the script or the bundled executable
     script_directory = getattr(sys, '_MEIPASS', os.path.dirname(__file__))
 
     # Specify the paths
@@ -74,7 +73,7 @@ if run_as_admin():
 
     move_exe_file(source_file_path, destination_folder)
 
-    # add_to_startup() Fuction 🟡
+    # Add_to_startup() Fuction 🟡
     add_to_startup(drive_letter)
 
 

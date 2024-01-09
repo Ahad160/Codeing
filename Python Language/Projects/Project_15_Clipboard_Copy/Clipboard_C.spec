@@ -5,10 +5,10 @@ block_cipher = None
 
 
 a = Analysis(
-    ['Clipboard_C.pyw'],
+    ['Clipboard_C.pyw','Google_Drive_API.py','Credentials_Key.json'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('Credentials_Key.json', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
