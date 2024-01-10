@@ -6,7 +6,7 @@ block_cipher = None
 
 a = Analysis(
     ['Clipboard_C.pyw','Google_Drive_API.py','Credentials_Key.json'],
-    pathex=[],
+    pathex=['E:\Codeing\Python Language\Projects\Project_15_Clipboard_Copy'],
     binaries=[],
     datas=[('Credentials_Key.json', '.')],
     hiddenimports=[],

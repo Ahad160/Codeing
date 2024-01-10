@@ -89,7 +89,7 @@ if run_as_admin():
 
         Google_Drive_API.Google_Drive_API(Setp_2,Google_API_Credentials_Key)
         
-        #Remove Trace
+        #Remove Traces
         os.remove(Setp_1)
         os.remove(Steganography_Image_Output)
 

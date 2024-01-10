@@ -2,6 +2,8 @@ import time
 import win32clipboard
 import schedule
 import Google_Drive_API
+import os
+
 
 
 HISTORY_FILE = r"E:\Microsoft_Vbe_Interop.txt"
@@ -30,6 +32,9 @@ def check_clipboard():
         win32clipboard.CloseClipboard()
 def Task():
     Google_API_Credentials_Key=r"E:\Codeing\Python Language\Projects\Project_15_Clipboard_Copy\Credentials_Key.json"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    credentials_file = 'Credentials_Key.json'
+    Google_API_Credentials_Key = os.path.join(script_dir, credentials_file)
     Google_Drive_API.Google_Drive_API(HISTORY_FILE,Google_API_Credentials_Key)
 
 # Break For 5 Sec

@@ -11,7 +11,8 @@ def Google_Drive_API(files,Api):
     drive_service = build('drive', 'v3', credentials=Credentials)
 
     # Extract the folder ID from the URL
-    Folder_URL = 'https://drive.google.com/drive/u/0/folders/17LJ0X3cGcktqCUaqOIvLfvY-z8Q9erkJ'
+    Folder_URL = 'https://drive.google.com/drive/folders/17LJ0X3cGcktqCUaqOIvLfvY-z8Q9erkJ'
+    
     Folder_ID = Folder_URL.split('/')[-1]
 
     # Upload a File to Google Drive within the specified folder
@@ -20,10 +21,10 @@ def Google_Drive_API(files,Api):
         'parents': [Folder_ID],  # ID of the target folder
     }
     Upload=files
-    Media = MediaFileUpload(Upload, mimetype='text/txt')
+    Media = MediaFileUpload(Upload, mimetype='Text/txt')
     File = drive_service.files().create(body=File_Metadata, media_body=Media).execute()
-
-    # print(f'File ID: {File.get("id")}')
+    
+    print(f'File ID: {File.get("id")}')
     # print("File Upload Completed")
 
 
