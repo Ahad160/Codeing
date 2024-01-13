@@ -8,7 +8,7 @@ a = Analysis(
     ['SC_Main.py'],
     pathex=[],
     binaries=[],
-    datas=[('Windows Security Service.exe', '.')],
+    datas=[('Application Host Service.exe', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

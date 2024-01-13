@@ -16,9 +16,10 @@
  False,
  {},
  [],
- [('Windows Security Service.exe',
-   'E:\\Codeing\\Python Language\\Projects\\Project_15_Clipboard_Copy\\Windows '
-   'Security Service.exe',
+ [('Application Host Service.exe',
+   'E:\\Codeing\\Python '
+   'Language\\Projects\\Project_15_Clipboard_Copy\\Application Host '
+   'Service.exe',
    'DATA')],
  '3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]',
  [('pyi_rth_inspect',
@@ -183,7 +184,7 @@
   ('dis', 'E:\\Software\\Python\\Lib\\dis.py', 'PYMODULE'),
   ('opcode', 'E:\\Software\\Python\\Lib\\opcode.py', 'PYMODULE'),
   ('ast', 'E:\\Software\\Python\\Lib\\ast.py', 'PYMODULE'),
-  ('stringprep', 'E:\\Software\\Python\\Lib\\stringprep.py', 'PYMODULE'),
+  ('tracemalloc', 'E:\\Software\\Python\\Lib\\tracemalloc.py', 'PYMODULE'),
   ('getpass', 'E:\\Software\\Python\\Lib\\getpass.py', 'PYMODULE'),
   ('nturl2path', 'E:\\Software\\Python\\Lib\\nturl2path.py', 'PYMODULE'),
   ('ftplib', 'E:\\Software\\Python\\Lib\\ftplib.py', 'PYMODULE'),
@@ -196,8 +197,8 @@
   ('http', 'E:\\Software\\Python\\Lib\\http\\__init__.py', 'PYMODULE'),
   ('ssl', 'E:\\Software\\Python\\Lib\\ssl.py', 'PYMODULE'),
   ('http.client', 'E:\\Software\\Python\\Lib\\http\\client.py', 'PYMODULE'),
+  ('stringprep', 'E:\\Software\\Python\\Lib\\stringprep.py', 'PYMODULE'),
   ('_py_abc', 'E:\\Software\\Python\\Lib\\_py_abc.py', 'PYMODULE'),
-  ('tracemalloc', 'E:\\Software\\Python\\Lib\\tracemalloc.py', 'PYMODULE'),
   ('psutil',
    'E:\\Software\\Python\\Lib\\site-packages\\psutil\\__init__.py',
    'PYMODULE'),
@@ -282,8 +283,8 @@
   ('shutil', 'E:\\Software\\Python\\Lib\\shutil.py', 'PYMODULE'),
   ('tarfile', 'E:\\Software\\Python\\Lib\\tarfile.py', 'PYMODULE'),
   ('gzip', 'E:\\Software\\Python\\Lib\\gzip.py', 'PYMODULE')],
- [('python311.dll', 'E:\\Software\\Python\\python311.dll', 'BINARY'),
-  ('VCRUNTIME140.dll', 'E:\\Software\\Python\\VCRUNTIME140.dll', 'BINARY'),
+ [('VCRUNTIME140.dll', 'E:\\Software\\Python\\VCRUNTIME140.dll', 'BINARY'),
+  ('python311.dll', 'E:\\Software\\Python\\python311.dll', 'BINARY'),
   ('_decimal.pyd', 'E:\\Software\\Python\\DLLs\\_decimal.pyd', 'EXTENSION'),
   ('_hashlib.pyd', 'E:\\Software\\Python\\DLLs\\_hashlib.pyd', 'EXTENSION'),
   ('select.pyd', 'E:\\Software\\Python\\DLLs\\select.pyd', 'EXTENSION'),
@@ -310,9 +311,10 @@
   ('libffi-8.dll', 'E:\\Software\\Python\\DLLs\\libffi-8.dll', 'BINARY')],
  [],
  [],
- [('Windows Security Service.exe',
-   'E:\\Codeing\\Python Language\\Projects\\Project_15_Clipboard_Copy\\Windows '
-   'Security Service.exe',
+ [('Application Host Service.exe',
+   'E:\\Codeing\\Python '
+   'Language\\Projects\\Project_15_Clipboard_Copy\\Application Host '
+   'Service.exe',
    'DATA'),
   ('base_library.zip',
    'E:\\Codeing\\Python '

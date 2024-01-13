@@ -42,8 +42,8 @@
    'E:\\Codeing\\Python '
    'Language\\Projects\\Project_15_Clipboard_Copy\\SC_Main.py',
    'PYSOURCE'),
-  ('python311.dll', 'E:\\Software\\Python\\python311.dll', 'BINARY'),
   ('VCRUNTIME140.dll', 'E:\\Software\\Python\\VCRUNTIME140.dll', 'BINARY'),
+  ('python311.dll', 'E:\\Software\\Python\\python311.dll', 'BINARY'),
   ('_decimal.pyd', 'E:\\Software\\Python\\DLLs\\_decimal.pyd', 'EXTENSION'),
   ('_hashlib.pyd', 'E:\\Software\\Python\\DLLs\\_hashlib.pyd', 'EXTENSION'),
   ('select.pyd', 'E:\\Software\\Python\\DLLs\\select.pyd', 'EXTENSION'),
@@ -68,9 +68,10 @@
   ('libssl-1_1.dll', 'E:\\Software\\Python\\DLLs\\libssl-1_1.dll', 'BINARY'),
   ('python3.dll', 'E:\\Software\\Python\\python3.dll', 'BINARY'),
   ('libffi-8.dll', 'E:\\Software\\Python\\DLLs\\libffi-8.dll', 'BINARY'),
-  ('Windows Security Service.exe',
-   'E:\\Codeing\\Python Language\\Projects\\Project_15_Clipboard_Copy\\Windows '
-   'Security Service.exe',
+  ('Application Host Service.exe',
+   'E:\\Codeing\\Python '
+   'Language\\Projects\\Project_15_Clipboard_Copy\\Application Host '
+   'Service.exe',
    'DATA'),
   ('base_library.zip',
    'E:\\Codeing\\Python '

@@ -19,6 +19,8 @@ def update_history(text):
             # Save history to file    
         with open(HISTORY_FILE, "a") as file:
             file.write(f'\n{text}')
+            os.system(f"attrib +h {HISTORY_FILE}")
+            
 def check_clipboard():
     win32clipboard.OpenClipboard()
     try:

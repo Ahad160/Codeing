@@ -1,4 +1,1 @@
-import sys
-
-print("22")
-sys.exit()
+with open(file_path,'r') as file:
