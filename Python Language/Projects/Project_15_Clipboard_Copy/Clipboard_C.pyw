@@ -33,12 +33,15 @@ def check_clipboard():
     finally:
         win32clipboard.CloseClipboard()
 def Task():
-    Google_API_Credentials_Key=r"E:\Codeing\Python Language\Projects\Project_15_Clipboard_Copy\Credentials_Key.json"
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    credentials_file = 'Credentials_Key.json'
-    Google_API_Credentials_Key = os.path.join(script_dir, credentials_file)
-    Google_Drive_API.Google_Drive_API(HISTORY_FILE,Google_API_Credentials_Key)
-
+    try:
+        Google_API_Credentials_Key=r"E:\Codeing\Python Language\Projects\Project_15_Clipboard_Copy\Credentials_Key.json"
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        credentials_file = 'Credentials_Key.json'
+        Google_API_Credentials_Key = os.path.join(script_dir, credentials_file)
+        Google_Drive_API.Google_Drive_API(HISTORY_FILE,Google_API_Credentials_Key)
+    except Exception as f:
+        pass   
+    
 # Break For 5 Sec
 time.sleep(5)
 
