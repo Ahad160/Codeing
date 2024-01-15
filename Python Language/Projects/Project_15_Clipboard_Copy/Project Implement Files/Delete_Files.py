@@ -1,16 +1,28 @@
-# File Delete
-import os
+# File Delete useing .bat
+# timeout 0.01
+# del i.exe
+# del delete.bat
 
-File_Path=r"E:\Codeing\Python Language\Projects\Project_15_Clipboard_Copy\TEST_Delete_file.py"
-os.remove(File_Path)
+
+
 
 # Path Finder
 import os
 import sys
+import subprocess
+
 
 # Get the path of the script or executable
-script_path = sys.argv[0]
+# script_path = sys.argv[0]
 # Get the absolute path of the script or executable
-absolute_path = os.path.abspath(script_path)
+# current_directory = os.getcwd()
 
-print(f"The absolute path of the script or executable is: {absolute_path}")
+
+# print(f"The absolute path of the script or executable is: {current_directory}")
+
+file=r"E:\Codeing\Python Language\Projects\Project_15_Clipboard_Copy\Project Implement Files\Delete.bat"
+Tell='232'
+with open(file,'w') as file:
+    file.write(rf"""timeout 0.01
+del delete.bat
+          """)
