@@ -9,3 +9,5 @@ print(b)
 print(c)
 print(d)
 print(e)
+
+user=int(input("Entr Num"))
