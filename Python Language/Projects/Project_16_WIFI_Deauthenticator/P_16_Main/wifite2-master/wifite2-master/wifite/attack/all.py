@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from .pmkid import AttackPMKID
+from .wep import AttackWEP
 from .wpa import AttackWPA
+from .wps import AttackWPS
 from ..config import Configuration
 from ..model.target import WPSState
 from ..util.color import Color
@@ -15,6 +17,9 @@ class AttackAll(object):
         Attacks all given `targets` (list[wifite.model.target]) until user interruption.
         Returns: Number of targets that were attacked (int)
         """
+        if any(t.wps for t in targets) and not AttackWPS.can_attack_wps():
+            # Warn that WPS attacks are not available.
+            Color.pl('{!} {O}Note: WPS attacks are not possible because you do not have {C}reaver{O} nor {C}bully{W}')
 
         attacked_targets = 0
         targets_remaining = len(targets)
@@ -50,9 +55,34 @@ class AttackAll(object):
 
         attacks = []
 
+        # if Configuration.use_eviltwin: #⭕
+        #     # TODO: EvilTwin attack
+        #     pass
+
+        # elif 'WEP' in target.encryption: #⭕
+        #     attacks.append(AttackWEP(target))
+
         if 'WPA' in target.encryption:
+            # WPA can have multiple attack vectors:
+
+            # # WPS
+            # if not Configuration.use_pmkid_only and target.wps is WPSState.UNLOCKED and AttackWPS.can_attack_wps(): #⭕
+            #     # Pixie-Dust
+            #     if Configuration.wps_pixie:
+            #         attacks.append(AttackWPS(target, pixie_dust=True))
+
+            #     # Null PIN zero-day attack
+            #     if Configuration.wps_pin:
+            #         attacks.append(AttackWPS(target, pixie_dust=False, null_pin=True))
+
+            #     # PIN attack
+            #     if Configuration.wps_pin: 
+            #         attacks.append(AttackWPS(target, pixie_dust=False))
 
             if not Configuration.wps_only:
+                # PMKID
+                # attacks.append(AttackPMKID(target)) #⭕  ♻️
+                
                 # Handshake capture
                 if not Configuration.use_pmkid_only:
                     attacks.append(AttackWPA(target))
@@ -86,8 +116,8 @@ class AttackAll(object):
                 else:
                     return False  # Stop all attacks (exit)
 
-        # if attack.success:
-        #     attack.crack_result.save()
+        if attack.success:
+            attack.crack_result.save()
 
         return True  # Keep attacking other targets
 

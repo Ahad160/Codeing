@@ -10,7 +10,7 @@ from wifite.config import Configuration
 setup(
     name='wifite',
     version=Configuration.version,
-    author='Raiden Ray',
+    author='kimocoder',
     author_email='christian@aircrack-ng.org',
     url='https://github.com/kimocoder/wifite2',
     packages=[
@@ -19,6 +19,9 @@ setup(
         'wifite/model',
         'wifite/tools',
         'wifite/util',
+    ],
+    data_files=[
+        ('share/dict', ['wordlist-probable.txt'])
     ],
     license='GNU GPLv2',
     scripts=['bin/wifite'],

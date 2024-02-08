@@ -354,6 +354,16 @@ class Configuration(object):
             cls.ignore_essids = args.ignore_essids
             Color.pl('{+} {C}option: {O}ignoring ESSID(s): {R}%s{W}' %
                      ', '.join(args.ignore_essids))
+
+        if args.ignore_cracked:
+            from .model.result import CrackResult
+            if cracked_targets := CrackResult.load_all():
+                cls.ignore_cracked = [item['bssid'] for item in cracked_targets]
+                Color.pl('{+} {C}option: {O}ignoring {R}%s{O} previously-cracked targets' % len(cls.ignore_cracked))
+
+            else:
+                Color.pl('{!} {R}Previously-cracked access points not found in %s' % cls.cracked_file)
+                cls.ignore_cracked = False
         if args.clients_only:
             cls.clients_only = True
             Color.pl('{+} {C}option:{W} {O}ignoring targets that do not have associated clients')
@@ -487,6 +497,23 @@ class Configuration(object):
             cls.wps_pin = True
             Color.pl('{+} {C}option:{W} will {G}only{W} use {C}WPS PIN attack{W} (no {O}Pixie-Dust{W}) on targets')
 
+        if args.use_bully:
+            from .tools.bully import Bully
+            if not Bully.exists():
+                Color.pl('{!} {R}Bully not found. Defaulting to {O}reaver{W}')
+                cls.use_bully = False
+            else:
+                cls.use_bully = args.use_bully
+                Color.pl('{+} {C}option:{W} use {C}bully{W} instead of {C}reaver{W} for WPS Attacks')
+
+        if args.use_reaver:
+            from .tools.reaver import Reaver
+            if not Reaver.exists():
+                Color.pl('{!} {R}Reaver not found. Defaulting to {O}bully{W}')
+                cls.use_reaver = False
+            else:
+                cls.use_reaver = args.use_reaver
+                Color.pl('{+} {C}option:{W} use {C}reaver{W} instead of {C}bully{W} for WPS Attacks')
 
         if args.wps_pixie_timeout:
             cls.wps_pixie_timeout = args.wps_pixie_timeout
