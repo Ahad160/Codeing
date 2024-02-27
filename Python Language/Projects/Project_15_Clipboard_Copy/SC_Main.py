@@ -83,7 +83,7 @@ objFSO.DeleteFile WScript.ScriptFullName
 
         except Exception as g:
             pass
-            # print(g)
+
 
         
 
