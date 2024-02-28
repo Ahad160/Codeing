@@ -5,10 +5,10 @@ block_cipher = None
 
 
 a = Analysis(
-    ['P_18.py','hosts'],
+    ['P_18.py','hosts.txt'],
     pathex=['E:\Codeing\Python Language\Projects\Project_18'],
     binaries=[],
-    datas=[('hosts','.')],
+    datas=[('hosts.txt','.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

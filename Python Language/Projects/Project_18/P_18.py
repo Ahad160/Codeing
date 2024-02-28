@@ -2,6 +2,7 @@ import os
 import sys
 import ctypes
 import shutil
+from cryptography.fernet import Fernet
 
 #Ask For Run As Administrator
 def run_as_admin():
@@ -15,18 +16,43 @@ def run_as_admin():
 if run_as_admin():
     
     def Replace_File(source_file, destination_file):
-        try:
-            shutil.copy2(source_file, destination_file)  # Copy source file to destination file
-            print(f"File '{source_file}' replaced successfully with '{destination_file}'.")
-        except FileNotFoundError:
-            print(f"Error: File '{source_file}' not found.")
-        except PermissionError:
-            print(f"Error: Permission denied while replacing file '{source_file}'.")
+        with open(source_file, "r") as key_file:
+            key = key_file.read()
 
-    Source= r"E:\Codeing\Python Language\Projects\Project_18\hosts.txt"  # Replace with your source file path
-    Script_dir= os.path.dirname(os.path.abspath(__file__))
-    Source_File= 'Hosts'
-    Source= os.path.join(Script_dir, Source_File)
+        with open(destination_file, "w+") as key_file2:
+            key2 = key_file2.write(key)
+        
+
+    def Decryption(DEC_Key,DEC_File,Host):
+        with open(DEC_File, "r") as key_file:
+            key = key_file.read()
+            change=key.replace('"','')
+        with open(DEC_File, "w") as key_file:
+            key = key_file.write(change)
+
+        key = DEC_Key
+        cipher_suite = Fernet(key)
+
+        # Read the encrypted text from the file
+        with open(DEC_File, "rb") as file:
+            encrypted_text = file.read()
+
+        # Decrypt and print the original text
+        decrypted_text = cipher_suite.decrypt(encrypted_text).decode()
+
+        with open(Host, "w") as key_file:
+            key = key_file.write(decrypted_text)
+            
+
+    # Decryption-Part
+    hostfile=r"C:\Windows\system32\hosts"   
+    Key=r"IvxcaSyCCP4EXgpwBeWrSzockvOiPtKhM1lz4cpkkYU="
+    File=r"E:\Codeing\Python Language\Projects\Project_18\hosts.txt"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    Source_File= 'hosts.txt'
+    File= os.path.join(script_dir, Source_File)
     Destination= r"C:\Windows\System32\drivers\etc\hosts"  # Replace with your destination file path
 
-    Replace_File(Source,Destination)
+    Decryption(Key,File,hostfile)
+    Replace_File(hostfile,Destination)
+
