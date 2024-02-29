@@ -4,8 +4,8 @@ File=r"E:\Codeing\Python Language\Projects\Project_18\Lines_codes"
 #         key = key_file.read()
 #         change=key.replace('"','')
 # with open(File, "w") as key_file:
-#         key = key_file.write(change)
+#         key = key_file.write(change)◘
 
 
 with open(File, "w") as key_file:
-        key = key_file.write("change")        
+        key = key_file.write("change") 

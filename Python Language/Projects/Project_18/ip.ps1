@@ -1,6 +1,13 @@
 # Define the domain and IP address
-$domain = "example.com"
+$domain = "example_NEW.com"
 $ip_address = "127.0.0.1"
+
+# Check if the current user has administrator privileges
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    # If not, relaunch as administrator
+    Start-Process powershell.exe -Verb RunAs -ArgumentList ("-File", $MyInvocation.MyCommand.Path)
+    Exit
+}
 
 # Path to the hosts file
 $hosts_file = "$env:SystemRoot\System32\drivers\etc\hosts"
