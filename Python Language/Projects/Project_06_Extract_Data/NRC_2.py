@@ -1,9 +1,9 @@
 # Open file 1 containing board rolls and CGPA
-Cgpa=r'E:\Codeing\Python Language\Projects\Project_6_Extract_Data\CGPA.txt'
+Cgpa=r'E:\Codeing\Python Language\Projects\Project_06_Extract_Data\CGPA.txt'
 with open(Cgpa, "r") as f1:
     board_cgpa = f1.readlines()
 
-All_Roll=r'E:\Codeing\Python Language\Projects\Project_6_Extract_Data\ALL_Roll.txt'
+All_Roll=r'E:\Codeing\Python Language\Projects\Project_06_Extract_Data\ALL_Roll.txt'
 # Open file 2 containing names and board rolls
 with open(All_Roll, "r") as f2:
     board_names_rolls = f2.readlines()
