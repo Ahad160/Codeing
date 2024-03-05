@@ -19,5 +19,5 @@ def Decryption(DEC_Key,DEC_File):
 
 
 Key=r"E:\Codeing\Python Language\Projects\Project_18\Encryption.key"
-File=r"Python Language/Projects/Project_18/hosts"
+File=r"E:\Codeing\Python Language\Projects\Project_18\hosts.txt"
 Decryption(Key,File)
