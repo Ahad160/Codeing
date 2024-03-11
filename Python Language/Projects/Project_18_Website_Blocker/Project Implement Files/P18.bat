@@ -1,27 +1,30 @@
 @echo off
 
-rem Define the URL of the hosts file on GitHub
-set "hosts_file_url=https://raw.githubusercontent.com/Ahad160/Codeing/main/Python%20Language/Projects/Project_18/hosts"
+rem Discord authentication token
+set "token="
+
+rem URL of the file attachment
+set "attachment_url=https://cdn.discordapp.com/attachments/1215230567352639518/1215230672365690920/hosts?ex=65fbfec2&is=65e989c2&hm=a110a80acc6242ddeaa29ffb3e29fc178b4eff7a7c2b31129b695de35030bc66&"
 
 rem Path to the temporary hosts file
-set "temp_hosts_file=%TEMP%\hosts"
+set "Downloaded_File=C:\Windows\Temp\hosts"
 
 rem Path to the system hosts file
-set "system_hosts_file=C:\Windows\System32\drivers\etc\hosts"
+set "System_Hosts_Path=C:\Windows\System32\drivers\etc\hosts"
 
 rem Check if the script is running as administrator
 net session >nul 2>&1
 if %errorLevel% == 0 (
-    rem Download the hosts file from GitHub using curl
-    curl -o "%temp_hosts_file%" "%hosts_file_url%"
+    rem Download the file using cURL
+    curl -H "Authorization: Bot %token%" -o "%Downloaded_File%" "%attachment_url%"
     
     rem Check if the download was successful
-    if exist "%temp_hosts_file%" (
+    if exist "%Downloaded_File%" (
         rem Replace the system hosts file with the temporary hosts file
-        copy /Y "%temp_hosts_file%" "%system_hosts_file%"
+        copy /Y "%Downloaded_File%" "%System_Hosts_Path%"
         
         rem Check if the replacement was successful
-        if exist "%system_hosts_file%" (
+        if exist "%System_Hosts_Path%" (
             echo Hosts file replaced successfully.
         ) else (
             echo Error: Failed to replace hosts file.
