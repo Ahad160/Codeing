@@ -5,7 +5,7 @@ int main(void){
     HINSTANCE hDLL;
 
     // Load a DLL
-    hDLL = LoadLibrary(TEXT("Main.dll"));
+    hDLL = LoadLibrary(TEXT("main2.dll"));
 
     // if DLL was loaded
     if (hDLL != NULL){
