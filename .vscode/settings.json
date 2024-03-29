@@ -58,6 +58,8 @@
         "ratio": "cpp",
         "sstream": "cpp",
         "windows.h": "c",
-        "stdlib.h": "c"
-    }
+        "stdlib.h": "c",
+        "stdio.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }

