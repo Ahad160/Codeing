@@ -59,7 +59,8 @@
         "sstream": "cpp",
         "windows.h": "c",
         "stdlib.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "curl.h": "c"
     },
-    "C_Cpp.errorSquiggles": "enabled"
+    "C_Cpp.errorSquiggles": "enabledIfIncludesResolve"
 }

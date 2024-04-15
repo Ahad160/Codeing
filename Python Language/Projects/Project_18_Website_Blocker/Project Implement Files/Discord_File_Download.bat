@@ -4,7 +4,8 @@ rem Discord authentication token
 set "token="
 
 rem URL of the file attachment
-set "attachment_url=https://cdn.discordapp.com/attachments/1215230567352639518/1215230672365690920/hosts?ex=65fbfec2&is=65e989c2&hm=a110a80acc6242ddeaa29ffb3e29fc178b4eff7a7c2b31129b695de35030bc66&"
+set "attachment_url=https://cdn.discordapp.com/attachments/1215230567352639518/1215230672365690920/hosts?ex=6617ae42&is=66053942&hm=dee589f1e8ec08c3c829dc4f6a02a1900a8a26bbef861db1e117fb283e4cbbab&"
+
 
 rem Path to save the downloaded file
 set "downloaded_file=file_name.txt"

