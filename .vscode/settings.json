@@ -60,7 +60,8 @@
         "windows.h": "c",
         "stdlib.h": "c",
         "stdio.h": "c",
-        "curl.h": "c"
+        "curl.h": "c",
+        "unistd.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabledIfIncludesResolve"
 }
