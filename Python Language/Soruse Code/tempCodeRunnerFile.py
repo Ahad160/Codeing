@@ -1,1 +1,2 @@
-user=int(input("Entr Num"))
+
+            if not pairs:
