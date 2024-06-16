@@ -1,4 +1,4 @@
-class Details{
+class Details {
     private int num;
     private String name;
 
