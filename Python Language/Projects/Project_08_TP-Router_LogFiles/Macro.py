@@ -16,6 +16,7 @@ time.sleep(4)
 # Simulate pressing Alt+D to focus on the address bar
 pyautogui.hotkey("alt", "d")
 
+
 # Type the URL
 pyautogui.typewrite("192.168.0.1")
 
