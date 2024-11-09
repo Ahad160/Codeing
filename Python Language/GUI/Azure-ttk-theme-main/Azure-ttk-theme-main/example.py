@@ -290,7 +290,7 @@ if __name__ == "__main__":
     root.title("")
 
     # Simply set the theme
-    root.tk.call("source", "azure.tcl")
+    root.tk.call("source", r"E:\Codeing\Python Language\GUI\Azure-ttk-theme-main\Azure-ttk-theme-main\azure.tcl")
     root.tk.call("set_theme", "dark")
 
     app = App(root)

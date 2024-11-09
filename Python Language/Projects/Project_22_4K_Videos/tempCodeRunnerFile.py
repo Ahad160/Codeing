@@ -1,0 +1,2 @@
+
+                foreground='white',     # Text color
