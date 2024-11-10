@@ -14,44 +14,20 @@ except tk.TclError:
     print("Azure theme file not found. Please check the path to 'azure.tcl'.")
 
 # Main label
-label = ttk.Label(root, text="Hello with Azure Theme!")
-label.pack(padx=20, pady=20)
+label = ttk.Label(root, text="YouTube 4K Video Downloader")
+label.pack(padx=20, pady=20)    
 
-# Set a minsize for the window and center it
-root.update()
-root.minsize(root.winfo_width(), root.winfo_height())
-x_cordinate = int((root.winfo_screenwidth() / 2) - (root.winfo_width() / 2))
-y_cordinate = int((root.winfo_screenheight() / 2) - (root.winfo_height() / 2))
-root.geometry("+{}+{}".format(x_cordinate, y_cordinate - 20))
+# Main label with extra bottom padding
+label = ttk.Label(root, text="Enter YouTube Video link")
+label.pack(padx=20, pady=(20, 0))  # Reduces bottom padding on the label
 
-# Add a label above the entry box
-entry_label = ttk.Label(root, text="Enter the link:", anchor="w")
-entry_label.pack(padx=20, pady=(10, 0), fill="x")
-
-# Add a ttk entry box with placeholder functionality
-placeholder_text = "Enter the Link"
-
+# Add a ttk entry box with top padding to add more spacing below the label
 entry = ttk.Entry(root, width=30)
-entry.insert(0, placeholder_text)
-entry.pack(padx=20, pady=10)
+entry.pack(padx=20, pady=(10, 20))  # Adds top padding on the entry box
 
-# Function to show placeholder if the entry is empty
-def check_placeholder(event=None):
-    if entry.get() == "":
-        entry.insert(0, placeholder_text)
-        entry.config(foreground="gray")
-    elif entry.get() == placeholder_text:
-        entry.delete(0, tk.END)
-        entry.config(foreground="black")
-
-# Set initial color for placeholder
-entry.config(foreground="gray")
-
-# Bind events to manage placeholder behavior
-entry.bind("<FocusIn>", check_placeholder)
-entry.bind("<FocusOut>", check_placeholder)
-entry.bind("<KeyRelease>", check_placeholder)  # Check after every key release
-
+def Download_Event():
+    Url=entry.get()
+    
 
 # Apply the style to the button
 accent_button = ttk.Button(root, text="Download", style='Accent.TButton')
