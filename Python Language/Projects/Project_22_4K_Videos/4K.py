@@ -2,23 +2,6 @@ import tkinter as tk
 from tkinter import ttk
 from yt_dlp import YoutubeDL
 
-import subprocess
-import sys
-
-# Function to check if a package is installed
-def check_and_install(package):
-    try:
-        __import__(package)  # Try to import the module
-        print(f"{package} is already installed.")
-    except ImportError:
-        print(f"{package} not found. Installing...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-# Check and install tkinter and yt-dlp
-check_and_install('tkinter')  # tkinter is usually pre-installed with Python
-check_and_install('yt-dlp')
-
-
 
 def YouTube_Download_Module(Url):
     Video_Settings= {
