@@ -1,0 +1,15 @@
+sending incremental file list
+created directory /backup/current
+EXERCISES-9/
+EXERCISES-9/.swl
+EXERCISES-9/.swm
+EXERCISES-9/.swn
+EXERCISES-9/.swo
+EXERCISES-9/.swp
+EXERCISES-9/LH.tar
+EXERCISES-9/LH1.sh
+EXERCISES-9/LH2.sh
+EXERCISES-9/LH3.sh
+
+sent 276 bytes  received 85 bytes  722.00 bytes/sec
+total size is 71,810  speedup is 198.92 (DRY RUN)
